@@ -26,7 +26,7 @@ import { AutoDialService } from '../../../autoDialer.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 //Time Picker
-import { AmazingTimePickerService } from 'amazing-time-picker';
+// import { AmazingTimePickerService } from 'amazing-time-picker';
 
 //Plivo
 import Plivo from 'plivo-browser-sdk';
@@ -560,8 +560,7 @@ export class FeedBackComponent {
    callBackStartTime;
    callBackEndTime;
   // notes;
-  constructor( private atp: AmazingTimePickerService,
-    public dialogRef: MatDialogRef<FeedBackComponent>,
+  constructor(public dialogRef: MatDialogRef<FeedBackComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {
    console.log('feedback details', data);
   //  this.callerName = data.name;
@@ -612,23 +611,6 @@ export class FeedBackComponent {
     localStorage.removeItem('Name')
   }
 
-   //TimePicker function
-   startTime(){
-    const amazingTimePicker = this.atp.open();
-    amazingTimePicker.afterClose().subscribe(time=>{
-      console.log('time:',time);
-      this.callBackStartTime= time;
-    })
-  }
-
-  endTime(){
-    const amazingTimePicker = this.atp.open();
-    amazingTimePicker.afterClose().subscribe(time=>{
-      console.log('time:',time);
-    
-      this.callBackEndTime= time;
-    })
-  }
 }
 
 

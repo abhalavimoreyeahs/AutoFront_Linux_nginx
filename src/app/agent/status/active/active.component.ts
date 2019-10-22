@@ -22,7 +22,7 @@ import timeGrigPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction'; // for dateClick
 
 //Time Picker
-import { AmazingTimePickerService } from 'amazing-time-picker';
+// import { AmazingTimePickerService } from 'amazing-time-picker';
 
 //Plivo
 import Plivo from 'plivo-browser-sdk';
@@ -562,8 +562,7 @@ export class FeedBackComponent {
   // callBackEndTime;
   // notes;
   selectedValue:Number;
-  constructor(private atp: AmazingTimePickerService,
-    public dialogRef: MatDialogRef<FeedBackComponent>,
+  constructor( public dialogRef: MatDialogRef<FeedBackComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {
     console.log('feedback details', data);
  
