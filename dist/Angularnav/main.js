@@ -449,7 +449,7 @@ var AppModule = /** @class */ (function () {
                     useClass: _token_interceptor_service__WEBPACK_IMPORTED_MODULE_4__["TokenInterceptorService"],
                     multi: true
                 },
-                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_18__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_18__["PathLocationStrategy"] }
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_18__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_18__["HashLocationStrategy"] }
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
