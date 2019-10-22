@@ -381,7 +381,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angular_font_awesome__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! angular-font-awesome */ "./node_modules/angular-font-awesome/dist/angular-font-awesome.es5.js");
 /* harmony import */ var ng_pick_datetime__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ng-pick-datetime */ "./node_modules/ng-pick-datetime/picker.js");
 /* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm5/drag-drop.es5.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 
 
 
@@ -404,7 +403,7 @@ __webpack_require__.r(__webpack_exports__);
 //date time pick
 
 
-
+// import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -449,7 +448,7 @@ var AppModule = /** @class */ (function () {
                     useClass: _token_interceptor_service__WEBPACK_IMPORTED_MODULE_4__["TokenInterceptorService"],
                     multi: true
                 },
-                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_18__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_18__["HashLocationStrategy"] }],
+            ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
