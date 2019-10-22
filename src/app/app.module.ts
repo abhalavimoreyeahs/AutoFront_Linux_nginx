@@ -15,7 +15,7 @@ import {ScheduleModule, AgendaService, DayService, WeekService, WorkWeekService,
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule, MatDialog } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ToastrModule } from 'ngx-toastr';
-import { AmazingTimePickerModule } from 'amazing-time-picker';
+// import { AmazingTimePickerModule } from 'amazing-time-picker';
 
 //font awesome 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -51,7 +51,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatIconModule,
     MatButtonModule,
     ScheduleModule ,
-    AmazingTimePickerModule,
+    // AmazingTimePickerModule,
     AngularFontAwesomeModule,
     ToastrModule.forRoot({
       timeOut: 2500,
