@@ -1,0 +1,68 @@
+<div style="background-color:#ecf0f5;">
+    <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+      
+ <div class="box" >
+  <mat-table [dataSource]="dataSource" matSort *ngIf="AgentsDetails">
+     
+<!-- <ng-container matColumnDef="Image">
+       <mat-header-cell *matHeaderCellDef > Image</mat-header-cell>
+       <mat-cell *matCellDef="let user">
+            <img src="../../../assets/no-photo.png"  style="width:60px;width:60px;margin:5% 5% 5% 5%"> 
+       </mat-cell>
+     </ng-container> -->
+     <ng-container matColumnDef="S No">
+
+        <mat-header-cell *matHeaderCellDef><b>S No</b></mat-header-cell>
+        <mat-cell *matCellDef="let user; let i = index;"> {{i+1}} </mat-cell>
+      </ng-container>
+
+    <ng-container matColumnDef="firstName" >
+      <mat-header-cell *matHeaderCellDef mat-sort-header><b> First Name </b> </mat-header-cell>    
+      <mat-cell *matCellDef="let user" >
+            <!-- <img src="../../../assets/men.jpg"  style="width:40px;width:40px;margin:5% 5% 5% 5%">  -->
+        {{user.users.firstName  | titlecase}}
+        </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+       <mat-header-cell *matHeaderCellDef mat-sort-header><b>Email Address</b></mat-header-cell>
+       <mat-cell *matCellDef="let user">{{user.users.email}}</mat-cell>
+     </ng-container>
+
+     <ng-container matColumnDef="lastName">
+         <mat-header-cell *matHeaderCellDef mat-sort-header> <b>Last Name</b></mat-header-cell>
+         <mat-cell *matCellDef="let user">{{user.users.lastName  | titlecase}}</mat-cell>
+       </ng-container>
+
+       <ng-container matColumnDef="details">
+            <mat-header-cell *matHeaderCellDef mat-sort-header><b>Details</b></mat-header-cell>
+            <mat-cell *matCellDef="let user">no data</mat-cell>
+          </ng-container>
+
+       <ng-container matColumnDef="edit">
+           <mat-header-cell *matHeaderCellDef><b>Edit</b></mat-header-cell>
+           <mat-cell *matCellDef="let user">
+            <button mat-icon-button color="accent" (click)="redirectToUpdate()">
+                <mat-icon class="mat-18">system_update</mat-icon>
+            </button>
+           </mat-cell>
+         </ng-container>
+         <ng-container matColumnDef="delete">
+            <mat-header-cell *matHeaderCellDef><b>Delete</b></mat-header-cell>
+            <mat-cell *matCellDef="let user">
+                <button mat-icon-button color="warn" (click)="redirectToDelete()">
+                    <mat-icon class="mat-18">delete</mat-icon>
+                </button>
+            </mat-cell>
+          </ng-container>
+ 
+       <mat-header-row *matHeaderRowDef="displayedColumns">
+       </mat-header-row>
+       <mat-row *matRowDef="let row; columns: displayedColumns" ></mat-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+   </div>
+</div>
+

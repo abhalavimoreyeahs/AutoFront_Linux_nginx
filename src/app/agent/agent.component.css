@@ -1,0 +1,99 @@
+/*code*/
+/*------------------------------*/
+/*tool bar*/
+/*------------------------------*/
+.floating-header-div {
+    position: fixed;  
+    z-index: 999;
+    width: 100%;  
+  }
+
+/* red pulsating dot*/
+.ring-container {
+    position: relative;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 23px;
+    left: 23px;
+}
+
+.ringring {
+    border: 3px solid red;
+    -webkit-border-radius: 20px;
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    -webkit-animation: pulsate 2s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+    
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  }
+
+  .mat-nav-list a.active {
+    background:rgb(119, 21, 175);
+}
+
+.active-link {
+    background-color: grey;
+}
+
+/* a.hover{
+    color:#039be5;
+    background-color:gray;
+} */
+a.active{
+    color:rgb(44, 153, 11);
+    background-color:rgb(238, 65, 50);
+}
+
+#btn{
+    margin: 2% 2% 2% 2%;
+}
+
+button.active{
+    background-color:mediumpurple;
+}
+.is-active {
+    background-color: red;
+    margin:1% 1% 1% 1%;
+}
+
+#profile{
+    width:200px;
+}
+
+button:focus, button:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }

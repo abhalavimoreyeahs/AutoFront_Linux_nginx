@@ -1,0 +1,39 @@
+
+<h2 mat-dialog-title style="text-align: center">On Break</h2>
+<mat-dialog-content style="text-align: center">
+        <mat-form-field>
+                <mat-label>Change Status</mat-label>
+                 <mat-select [(ngModel)]="select" >
+                        <mat-option  [value]="0"  [(ngModel)]="data.value" name="value"> Active </mat-option>
+                        <mat-option  [value]="1"   [(ngModel)]="data.value" name="value"> Manual </mat-option>
+                 </mat-select>
+       </mat-form-field>   
+        <!-- <div class="row">
+                <div class="col" style="margin-left:5%">
+                        <mat-form-field>
+                                <mat-label>Caller Name</mat-label>
+                                <input  matInput  placeholder="Caller Name" style="max-width: 100px" [(ngModel)]="data.name" name="name" [value]="" required>                      
+                       </mat-form-field><br>
+                       <mat-form-field *ngIf="select">
+                            <mat-label>CallBack Date</mat-label>
+                            <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="data.startdate"  name="startdate">
+                            <mat-datepicker-toggle matSuffix [for]="picker" (click)="selectDate(startdate)"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>   
+                    </mat-form-field>                  
+                </div>
+                <div class="col">                  
+                        <mat-form-field>
+                                <mat-label>Change Status</mat-label>
+                                 <mat-select [(ngModel)]="select" >
+                                        <mat-option  [value]="0"> Active </mat-option>
+                                        <mat-option  [value]="1"> Manual </mat-option>
+                                 </mat-select>
+                       </mat-form-field>                            
+                </div>
+              </div> -->
+</mat-dialog-content>
+
+<mat-dialog-actions style="text-align:center;display: flex;justify-content: center;">
+    <!-- <button mat-button (click)="onNoClick()" class="mat-raised-button" style="width:100px">No Thanks</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial class="mat-raised-button mat-primary" style="width:100px">Ok</button>
+</mat-dialog-actions>

@@ -1,0 +1,13 @@
+
+p {
+    font-family: Lato;
+  }
+  table{
+    width: 95%;
+  }
+  #upload_button {
+    display: inline-block;
+  }
+  #upload_button input[type=file] {
+    display:none;
+  }

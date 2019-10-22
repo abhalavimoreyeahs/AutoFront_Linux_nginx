@@ -1,0 +1,331 @@
+.container-fluid {
+  background-image: url('../../../../assets/autodial_img-1-01.jpeg');
+  height: 100%; 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+.fc-unthemed {
+  background: #fcf8e3;
+}
+
+.mat-card {
+text-align:center;
+width:100%;
+background-color:none;
+color:white;
+}
+
+/* caller id */
+.card {
+  text-align:center;
+  opacity:0.9;
+}
+
+
+/*  dialog box  */
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-window > div {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: #fff;
+}
+.modal-window header {
+  font-weight: bold;
+}
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+.modal-close:hover {
+  color: black;
+}
+/* Demo Styles */
+html, body {
+  height: 100%;
+}
+body {
+  font: 600 12px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-image: linear-gradient(to right, #7f53ac 0, #657ced 100%);
+  color: black;
+}
+a {
+  color: inherit;
+}
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.modal-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+small {
+  color: #aaa;
+}
+.btn {
+  background-color: #fff;
+  padding: 1em 1.5em;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.btn i {
+  padding-right: 0.3em;
+}
+
+
+/*   Draggable div for quick notes */
+#accordion{
+  position: absolute;
+  bottom: 10px;
+  width: 25%;
+  border: 3px solid #673ab7;
+  right: 10px;
+  background-color: white;
+}
+.notes{
+  background-color: white;
+}
+
+
+/*   */
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+ 
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+/* angular material */
+.example-box {
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+              0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.example-box:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.example-handle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ccc;
+  cursor: move;
+  width: 24px;
+  height: 24px;
+}
+
+/*--------------------------------Campaign -------css-----------------------------------------*/
+.content-header{
+  position: relative;
+    padding: 15px 15px 0 15px;
+    background-color:transparent;
+    font:normal
+}
+
+.box{
+  position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    /* width: 100%; */
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    margin: 1% 1% 1% 1%;
+    /* box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.2),0 2px 10px 0 rgba(0, 0, 0, 0.12) !important; */
+}
+
+.box-header{
+  color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+
+h2{
+  margin: 0;
+  font-size: 28px;
+  font:normal;
+  font-weight:normal;
+
+}
+
+h3{
+  display: inline-block;
+  font-size: 18px;
+  margin: 0;
+  line-height: 1;
+  font:normal;
+  font-weight:normal;
+}
+.pointer {cursor: pointer;}
+
+h6{
+  color:black;
+}
+
+/*For table*/
+/* td{
+ padding-right:2%;
+}  */
+/*--------View Customer Details---------*/
+.dropbtn {
+  background-color:white;
+  color: white;
+  /* padding: 16px; */
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {color: #f3c99f;}
+/*-------------------------------------*/
+
+small{
+  font-size: 15px;
+    display: inline-block;
+    padding-left: 4px;
+    font-weight: 300;
+    line-height: 1; 
+    color: #777;
+    font-family: sans-serif;
+}
+
+.my-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 80%;
+  }
+   
+  .full-width {
+    width: 60%;
+  } 
+
+
+  .center{
+    width: 75%;
+    margin: 10px auto;
+  }
+  
+  .main-div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  table {
+    width: 100%;
+    /* margin: 20px 20px 20px 20px;  */
+  }
+
+  .add-files-btn {
+    float: right;
+  }
+  
+  :host {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  
+  .actions {
+    justify-content: flex-end;
+  }
+  
+  .container {
+    height: 100%;
+  }
+
+  .cursor{
+    cursor: pointer;
+  }

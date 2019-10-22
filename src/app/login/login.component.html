@@ -1,0 +1,66 @@
+<!-- <div class="container" style="display: flex; align-items: center;justify-content: center;">
+    <mat-card class="example-card">
+        <mat-card-header style="display: flex; align-items: center;justify-content: center;">
+          <mat-card-title><h2><b>Login</b></h2></mat-card-title>
+        </mat-card-header>
+        <mat-card-content style="margin-left: 150px;">
+            <img style="width:100px;height:100px;margin-top:10%;margin-left:10%" src="../../assets/user-login-icon.png"/>
+          <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width" style="margin-top:15%">
+                  <input matInput  placeholder="email" [(ngModel)]="loginData.email"  name="email" autocomplete="off" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+              <td><mat-form-field class="example-full-width">
+                <input matInput  placeholder="Password" [(ngModel)]="loginData.password" type="password"  name="password" autocomplete="off" required>
+              </mat-form-field></td>
+            </tr></table>
+          </form>
+          <mat-spinner [style.display]="showSpinner ? 'block' : 'none'" style="display: none;   width: 10px; height: 100px;"></mat-spinner>
+          <h5 *ngIf="loginFalse"> <span style="color:red">The user name or password is required </span></h5>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button (click)="login()" color="primary" style="margin-left: 185px; padding:0% 7%">Login</button>
+        </mat-card-actions>
+      </mat-card>
+
+</div> -->
+
+
+
+
+
+       <div layout="row" layout-align="center center">
+        <mat-card class="example-card" style=" max-width: 500px;margin-left: 700px; margin-top: 150px;">
+            <mat-card-header style="margin-left: 160px;">
+              <mat-card-title><h2><b>Login</b></h2></mat-card-title>
+            </mat-card-header>
+            <mat-card-content style="margin-left: 150px;">
+                <img style="width:100px;height:100px;margin-top:10%;margin-left:10%" src="../../assets/user-login-icon.png"/>
+              <form class="example-form">
+                <table class="example-full-width" cellspacing="0">
+                  <tr>
+                    <td>
+                      <mat-form-field class="example-full-width" style="margin-top:15%">
+                      <input matInput  placeholder="email" [(ngModel)]="loginData.email"  name="email" autocomplete="off" required>
+                      </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                  <td><mat-form-field class="example-full-width">
+                    <input matInput  placeholder="Password" [(ngModel)]="loginData.password" type="password"  name="password" autocomplete="off" required>
+                  </mat-form-field></td>
+                </tr></table>
+              </form>
+              <mat-spinner [style.display]="showSpinner ? 'block' : 'none'" style="display: none;   width: 10px; height: 100px;"></mat-spinner>
+              <h5 *ngIf="loginFalse"> <span style="color:red">The user name or password is required </span></h5>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button (click)="login()" color="primary" style="margin-left: 185px; padding:0% 7%">Login</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>

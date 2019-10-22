@@ -1,0 +1,69 @@
+<div style="background-color:#ecf0f5;width:100%; height:100%;">
+
+  <section class="content-header">
+    <h2>
+      Campaign Details
+      <small>All Campaign</small>
+    </h2>
+  </section>
+
+  <div class="box">
+
+    <mat-form-field [hideRequiredMarker]="true" class="alignment" style="padding-left:1%">
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+
+  </div>
+
+  <div class="example-container box">
+
+    <mat-table [dataSource]="dataSource" matSort>
+
+      <ng-container matColumnDef="S No">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>S No</mat-header-cell>
+        <mat-cell *matCellDef="let user; let i = index;" data-label="S No"> {{i+1}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="campaignName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Campaign Name</mat-header-cell>
+        <mat-cell *matCellDef="let user" data-label="campaignName">{{user.campaignName | titlecase }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="startdate">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Start Date</mat-header-cell>
+        <mat-cell *matCellDef="let user" data-label="startdate">{{user.startdate | date: 'dd/MMM/yyyy' }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="createdByAdmin">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Created By </mat-header-cell>
+        <mat-cell *matCellDef="let user" data-label="createdByAdmin">{{user.createdByAdmin | titlecase }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="assignToManager">
+        <mat-header-cell *matHeaderCellDef>Assigned To </mat-header-cell>
+        <mat-cell *matCellDef="let user" data-label="assignToManager">{{user.assignToManager | titlecase }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="createdAt">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Created At </mat-header-cell>
+        <mat-cell *matCellDef="let user" data-label="createdAt">{{user.createdAt | date: 'yyyy/MM/dd'}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="campaignMembers">
+        <mat-header-cell *matHeaderCellDef>Campaign Members</mat-header-cell>
+        <mat-cell *matCellDef="let user" data-label="campaignMembers">{{user.campaignMembers }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Campaign Status </mat-header-cell>
+        <mat-cell *matCellDef="let user" data-label="status"> {{user.status }} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayDummyData"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayDummyData"></mat-row>
+    </mat-table>
+
+    <mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator>
+  </div>
+
+</div>

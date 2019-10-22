@@ -1,0 +1,238 @@
+    <!---------------------------------------------------------------------------------------------------------->
+    <section id="basic-form-layouts">
+      <div class="row text-left">
+        <div class="col-sm-12">
+          <div class="content-header" style="text-align:center">
+          <!-- <h2> Feedback </h2> -->
+          </div>
+        </div>
+      </div>
+      <div class="row text-left">
+        <div class="col-md-12">
+          <div class="card">
+  
+            <div class="card-content">
+              <div class="px-3">
+                <form class="form" style="text-align:center">
+                  <div class="form-body">
+                    <h4 class="form-section" style="text-align:center;padding:3%" ><i class="ft-user"></i> Assign Agent to Manager</h4>
+                    <div class="row">
+                          <div class="col">
+                
+                            <mat-form-field>
+                              <mat-label>Manger Name</mat-label>
+                            
+                              <input matInput placeholder="Caller Name"  [(ngModel)]="data.Manager.ManagerName" name="managerName" [value]="" disabled>
+                            </mat-form-field>
+                          </div>
+                          <div class="col">
+                  
+                            <mat-form-field>
+                              <mat-label>E-mail</mat-label>
+                              <input  matInput  placeholder="email" [(ngModel)]="data.Manager.ManagerEmail" name="ManagerEmail" [value]="" disabled>                             
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <div class="row">
+                              <div class="col-md-6">
+                    
+                                <mat-form-field>
+                                  <mat-label>Running Campaign</mat-label>
+                                  <input  matInput  placeholder="Running Campaing"  [(ngModel)]="data.Manager.Running" name="Running" [value]="" disabled>                             
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                            
+                                <mat-form-field>
+                                  <mat-label>Stopped Campaign</mat-label>
+                                  <input  matInput  placeholder="Stopped Campaign"   [(ngModel)]="data.Manager.Stop" name="Stop" [value]="" disabled>                             
+                                </mat-form-field>
+                              </div>
+                            </div>
+
+
+                            <div class="row">
+                              <div class="col-md-6">
+                    
+                                <mat-form-field>
+                                  <mat-label>Campaign in Queue</mat-label>
+                                  <input  matInput  placeholder="Campaign in Queue"  [(ngModel)]="data.Manager.Queue" name="Queue" [value]="" disabled>                             
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                            
+                                <mat-form-field>
+                                  <mat-label>Campaign Completed</mat-label>
+                                  <input  matInput  placeholder="Campaign Completed"   [(ngModel)]="data.Manager.Completed" name="Completed" [value]="" disabled>                             
+                                </mat-form-field>
+                              </div>
+                            </div>
+
+                            
+                            <div class="row">
+                              <div class="col-md-6">
+                    
+                                <mat-form-field>
+                                  <mat-label> Campaign Idle</mat-label>
+                                  <input  matInput  placeholder="Running Campaing"  [(ngModel)]="data.Manager.Idle" name="Idle" [value]="" disabled>                             
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                               
+                                  <!-- <mat-label>Manger Id</mat-label> -->
+                                  <!-- <input  matInput  placeholder="ManagerId"   [(ngModel)]="data.managerId" name="managerId" [value]="" hidden>    -->
+                                                     
+                               
+                                <!-- <mat-form-field>
+                                  <mat-label>Stopped Campaign</mat-label>
+                                  <input  matInput  placeholder="Stopped Campaign"   [(ngModel)]="data.Manager.Stop" name="Stop" [value]="" disabled>                             
+                                </mat-form-field> -->
+                              </div>
+                            </div>
+
+    
+                    <h4 class="form-section"><i class="ft-file-text"></i> Assign Agent</h4>
+    
+                    <div class="row">
+                        <div class="col-md-12" style="padding-left:10%; padding-right:10%">
+                    <mat-form-field style="width:100%">
+                      <mat-label>Add Remark</mat-label>
+                      <textarea matInput placeholder="Leave a comment"   [(ngModel)]="data.remark" name="remark" value="" required></textarea>                           
+                    </mat-form-field>
+                  </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12" style="padding-left:10%; padding-right:10%">
+                        <mat-form-field style="width:100%">
+                          <mat-label>Available  Agent</mat-label>
+                          
+                           <mat-select [(ngModel)]="data.agentId" name="agentId" required>
+                              <mat-option *ngFor="let item of data.Agent.data" [value]="item.id">
+                                {{item.firstName}} {{item.lastName}}
+                              </mat-option>
+                            </mat-select>
+                             </mat-form-field> 
+                  </div>
+                  </div>
+  
+                  </div>
+    
+                  <div class="form-actions" style="padding:3%">
+                          <button mat-button [mat-dialog-close]="data" cdkFocusInitial class="mat-raised-button mat-primary"
+                          style="width:100px">Submit</button>
+                
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  </section>   
+  
+  
+<!------------------------------------------------------------------------------>
+
+
+
+<!-- <h2 mat-dialog-title style="text-align: center">FeedBack</h2> -->
+<!-- 
+<mat-dialog-content style="justify-content: center;">
+  <div class="px-3">
+    <form class="form">
+      <div class="form-body">
+        <h4 class="form-section"><i class="ft-user"></i> Manager Info</h4>
+        <div class="row">
+          <div class="col-md-6">
+
+            <mat-form-field>
+              <mat-label>Manger Name</mat-label>
+              <input  matInput  placeholder="Caller Name"   name="name" value="Annop Jain" disabled>   
+                                 
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+  
+            <mat-form-field>
+              <mat-label>E-mail</mat-label>
+              <input  matInput  placeholder="email"  name="email" value="anoop@moreyeahs.in" disabled>                             
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+
+            <mat-form-field>
+              <mat-label>Running Campaign</mat-label>
+              <input  matInput  placeholder="Running Campaing"   name="runningCampaign" value="1" disabled>                             
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+        
+            <mat-form-field>
+              <mat-label>Stopped Campaign</mat-label>
+              <input  matInput  placeholder="Stopped Campaign"   name="StoppedCampaign" value="0" disabled>                             
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+     
+            <mat-form-field>
+              <mat-label>Campaign in Queue</mat-label>
+              <input  matInput  placeholder="Campaign in Queue"   name="campaignInQueue" value="1" disabled>                             
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+   
+            <mat-form-field>
+              <mat-label>Campaign Completed</mat-label>
+              <input  matInput  placeholder="Campaign Completed"   name="campaignCompleted" value="5" disabled>                             
+            </mat-form-field>
+          </div>
+        </div>
+
+        <h4 class="form-section"><i class="ft-file-text"></i> Assign Agent</h4>
+
+  
+
+        <div class="row">
+
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="projectinput6">Available Agent</label>
+              <select id="projectinput6" name="budget" class="form-control">
+                <option value="0" selected="" disabled="">Agent</option>
+                <option value="1">Shruit</option>
+                <option value="2">Ravi</option>
+                <option value="3">Shivam</option>
+                <option value="4">Raj</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+        <mat-form-field style="width:100%">
+          <mat-label>Add Remark</mat-label>
+          <textarea matInput placeholder="Leave a comment"  name="comment" value="" required></textarea>                           
+        </mat-form-field>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+          <i class="ft-x"></i> Cancel
+        </button>
+        <button type="button" class="btn btn-raised btn-raised btn-primary">
+          <i class="fa fa-check-square-o"></i> Save
+        </button>
+      </div>
+    </form>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions style="text-align:center;display: flex;justify-content: center;">
+   
+
+</mat-dialog-actions> -->

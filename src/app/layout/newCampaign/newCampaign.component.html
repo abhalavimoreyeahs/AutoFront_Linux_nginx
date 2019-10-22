@@ -1,0 +1,90 @@
+<div style="background-color:#ecf0f5;width:100%; height:100%;" >
+    <div class="container">
+
+    <section class="content-header">
+        <h2>
+            Campaign
+            <small>Create new Campaign</small>
+        </h2>
+    </section>
+
+    <div class="example-container box">
+    <!-------------------------------try code--------------------->
+    <form class="form" style="text-align:center">
+            <div class="form-body">
+        
+                <div class="row">
+                    <div class="col">
+                            <mat-form-field>
+                                    <mat-label>Campaigns Name</mat-label>
+                                    <input matInput placeholder="Campaigns Name" style="max-width: 100px" [(ngModel)]="campingname"
+                                        name="campingname" [value]="" required>
+                                </mat-form-field>
+        
+                    </div>
+                    <div class="col">
+                            <mat-form-field >
+                                    <mat-label>Start Date</mat-label>
+                                    <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="startdate"
+                                        name="startdate">
+                                    <mat-datepicker-toggle matSuffix [for]="picker" (click)="selectDate(startdate)"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                            <mat-form-field>
+                                    <mat-select placeholder="Assign To Manager" name="assignedto" [(ngModel)]="assignedto">
+                                        <mat-option *ngFor="let role of ManagerData" [value]="role.id">{{ role.email }}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+        
+                    </div>
+                    <div class="col-md-6">
+                            <mat-form-field >
+                                    <mat-label>Select Campaign Members</mat-label>
+                    
+                                    <mat-select multiple name="customerIds" [(ngModel)]="customerIds">
+                                        <mat-option *ngFor="let customer of CustomerData" [value]="customer._id">{{customer.Name}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-6">
+                                <!-- <mat-form-field>
+                                        <mat-label>Select Excel File</mat-label>
+                                        <input  placeholder="excel sheet xls extension" type="file"  (change)="incomingfile($event)" multiple required>
+                                    </mat-form-field> -->
+
+                                    <input #file type="file" [hidden]="true" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" (change)="incomingfile($event)">
+<button mat-button #upload (click)="Upload()">Upload file</button>
+            
+                        </div>
+                        <div class="col-md-6">
+                                <!-- <button mat-button  cdkFocusInitial class="mat-raised-button mat-primary"
+                                style="width:100px">upload</button> -->
+                                <!-- <span style="margin-left:-13px"> {{selectedFile}}</span> -->
+                        </div>
+                    </div>
+            </div>
+        
+            <div class="form-actions" style="padding:3%">
+
+                <button mat-button [mat-dialog-close]="data" cdkFocusInitial class="mat-raised-button mat-primary"
+                    style="width:100px">Submit</button>
+                    <button mat-raised-button (click)="Cancel()" color="bg-danger"
+                    style="margin-left:12%; padding:0px 35px 0px 35px; background-color:brown">Cancel</button>
+        
+            </div>
+        </form>
+        <!------------------------------------------------------>
+ 
+
+    </div>
+
+</div>
+</div>
+

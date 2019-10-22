@@ -1,0 +1,73 @@
+  <mat-accordion>
+      <mat-expansion-panel [expanded]='f_firstPanel' [disabled]='!f_firstPanel'>
+          <mat-expansion-panel-header>
+              <mat-panel-title>
+                Select Manager
+              </mat-panel-title>
+              <mat-panel-description>
+                Agent Assignment
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+        
+            <h4>Select Manager</h4>
+      <mat-form-field>
+        <mat-label>Manager</mat-label>
+        <mat-select [(ngModel)]="managerId" (ngModelChange)="getAgent($event)">
+          <mat-option *ngFor="let manager of Manager" [value]="manager.id">
+            {{manager.email}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </mat-expansion-panel>
+        <mat-expansion-panel [expanded]='f_secondPanel' [disabled]='!f_secondPanel'>
+        <mat-expansion-panel-header>
+            <mat-panel-title>List of Agents</mat-panel-title>
+          </mat-expansion-panel-header>
+          <table mat-table [dataSource]="dataSource" >
+    
+              <ng-container matColumnDef="S No">
+                  <th mat-header-cell *matHeaderCellDef>S No.</th>
+                  <td mat-cell *matCellDef="let user; let i = index;"> {{i+1}} </td>
+                </ng-container>
+                <!-- Name Column -->
+                <ng-container matColumnDef="img">
+                    <th mat-header-cell *matHeaderCellDef></th>
+                    <td mat-cell *matCellDef="let user;"> 
+                    <img src="../../../assets/no-photo.png" style="width:50px;height:50px;margin:1% 1% 1% 1%">  
+                    </td>
+                  </ng-container>
+                <ng-container matColumnDef="firstName">
+                  <th mat-header-cell *matHeaderCellDef>First Name </th>
+                  <td mat-cell *matCellDef="let element;"> {{element.users.firstName}} </td>
+                </ng-container>
+        
+                <ng-container matColumnDef="lastName">
+                    <th mat-header-cell *matHeaderCellDef>Last Name </th>
+                    <td mat-cell *matCellDef="let element;"> {{element.users.lastName}} </td>
+                  </ng-container>
+        
+                  <ng-container matColumnDef="email">
+                      <th mat-header-cell *matHeaderCellDef>Email </th>
+                      <td mat-cell *matCellDef="let element;"> {{element.users.email}} </td>
+                    </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    
+    <br>
+    <div style="margin: auto">
+    <button mat-raised-button color="primary" style="margin: 30px" (click)="editTrainer()">Edit</button>
+    <button mat-raised-button color="primary" style="margin: 30px" (click)="cancelEdit()">Cancel</button>
+    </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+
+
+
+
+
+
+
+
+

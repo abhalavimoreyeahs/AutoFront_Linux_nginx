@@ -1,0 +1,129 @@
+
+  .container-fluid {
+    background-image: url('../../../../assets/autodial_img-1-01.jpeg');
+    height: 100%; 
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+  }
+  .fc-unthemed {
+    background: #fcf8e3;
+}
+
+
+/*Dialler*/
+.digit,
+.digit {
+  float: left;
+  padding: 10px 30px; /* 10px 30px*/
+  width: 80px; 
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.sub {
+  font-size: 0.2rem;
+  color: grey;
+}
+
+.container {
+  background-color:white;
+  color: black;
+  width: 315px;
+  padding: 20px;
+  margin: 30px auto;
+  height: 480px;
+  text-align: center;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 2%;
+}
+#usr {
+  font-family: "Exo";
+ font-size: 1rem;
+ font-weight: bold;
+}
+
+#output {
+  /* font-family: "Exo";
+  font-size: 2rem;
+  height: 40px;
+  font-weight: bold; */
+  /* color: #1976d2; */
+  color:black;
+  background-color:white;
+}
+
+#call {
+  display: inline-block;
+  background-color: #66bb6a;
+  padding: 4px 30px;
+  margin: 5%;
+  color: white;
+  border-radius: 4px;
+  float: left; 
+  cursor: pointer;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.botrow {
+  margin: 0  auto;
+  width: 320px; 
+  clear: both;
+  text-align: center;
+  font-family: 'Exo';
+}
+
+.digit:active,
+.dig:active {
+  background-color: #e6e6e6;
+}
+
+.digit:hover {
+  background-color: #81c784;
+  border-radius: 100%;
+}
+
+.dig {
+  float: left;
+  padding: 10px 25px;
+  margin: 10px;
+  width: 30px;
+  cursor: pointer;
+}
+
+/*   Draggable div for quick notes */
+#accordion{
+  position: absolute;
+  bottom: 10px;
+  width: 25%;
+  border: 3px solid #673ab7;
+  right: 10px;
+  background-color: white;
+}
+.notes{
+  background-color: white;
+}
+
+
+/*   */
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+ 
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}

@@ -1,0 +1,168 @@
+<div class="row" >
+    <h4  style="padding-top: 20px; margin-left:20%"><b>Parent and Child Scheduled Call Details</b></h4>
+    
+  </div>
+  <hr>
+  <div class="row">
+    
+    <!-- <div  class="col-6">
+        <div class="form-group">
+            <label for="name">First Name</label>
+            <input ng-required="true" type="text" class="form-control" id="firstname"  [(ngModel)]="people.PeopleFirstName" placeholder="First Name" >
+        </div>
+        <div class="form-group">
+            <label for="name">Last Name</label>
+            <input  type="text" class="form-control" id="lastname"  [(ngModel)]="people.PeopleLastName" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <label for="name">Email</label>
+            <input type="text" class="form-control" id="email"  [(ngModel)]="people.Email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="name">Password</label>
+            <input type="text" class="form-control" id="password"  [(ngModel)]="people.Password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="name">Mobile</label>
+            <input type="text" class="form-control" id="mobile"  [(ngModel)]="people.Mobile" placeholder="Mobile">
+        </div>
+        <div class="form-group">
+            <label for="name">Status</label>
+            <input  type="text" class="form-control" id="status"  [(ngModel)]="people.status" placeholder="Status">
+        </div>
+        <div class="form-group">
+          <label for="name">Select State</label>
+          <select id="state" name="state"  class="form-control" [(ngModel)]="people.Stateid"  placeholder="Select State">
+              <option *ngFor="let state of stateList" [ngValue]="state.Stateid">
+                {{ state.StateName }}
+              </option>
+            </select>
+  
+      </div>
+      <div class="form-group">
+        <label for="name">Select City</label>
+        <select id="city" name="city" class="form-control" [(ngModel)]="people.Cityid">
+            <option *ngFor="let city of cityList" [ngValue]="city.Cityid">
+              {{ city.CityName }}
+            </option>
+          </select>
+    </div>
+       
+    </div>  -->
+  
+  
+    <div  class="col-6" >
+        <div>
+          <h4>First Scheduled Calls (Parent)</h4>
+                <table class="table" style="border: 1px solid">
+                        <thead style="height: 10%">
+                        <tr>
+ <th>S.NO</th>
+<th>  _id </th> 
+<th>aLegUUID:       </th>        
+<th>isCustomerIntereseted</th> 
+<th>descrptionOnCall</th> 
+<th>callBackEndTime</th> 
+<th>agentid</th> 
+<th>customerMobNo</th> 
+<th>callbackStatus</th> 
+<th>parentid</th> 
+<th>createdAt</th> 
+<th>updatedAt</th> 
+<th>callhangupsource</th> 
+<th>durationCallEnd</th> 
+<th>durationCallStart </th> 
+                          <!-- <th *ngIf="isAdminBoolean">Edit </th>       
+                          <th *ngIf="isAdminBoolean">Delete</th> -->
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor ="let item of parent; index as row">
+                          <th scope="row">{{row + 1}}</th>
+                          <!-- <td><img src={{item.productImage}} style="width:70px; height:60px">&nbsp;&nbsp;{{item.name}} </td>
+                          <td>{{item.brand}}</td>
+                          <td>{{item.quantity}}</td>
+                          <td>{{item.price}}</td> -->
+<td> {{item._id}}</td>
+<td>{{item.aLegUUID}}</td>
+<td>{{item.isCustomerIntereseted}}</td>
+<td>{{item.descrptionOnCall}}</td>
+<td>{{item.callBackEndTime}}</td>
+<td>{{item.agentid}}</td>
+<td>{{item.customerMobNo}}</td>
+<td>{{item.callbackStatus}}</td>
+<td>{{item.parentid}}</td>
+<td>{{item.createdAt}}</td>
+<td>{{item.updatedAt}}</td>
+<td>{{item.callhangupsource}}</td>
+<td>{{item.durationCallEnd}}</td>
+<td>{{item.durationCallStart}}</td>
+                          <!-- <td> <button type="button" class="btn btn-warning" *ngIf="isAdminBoolean"  (click)="editProduct(item._id)">Edit</button></td>
+                          <td> <button type="button" class="btn btn-danger"  *ngIf="isAdminBoolean" (click)="deleteProduct(item._id)">Delete</button></td> -->
+                        </tr>
+                        </tbody>
+                      </table>
+        </div>
+        <div>
+          <h4>Child Scheduled calls </h4>
+                <table class="table" style="border: 1px solid">
+                        <thead style="height: 10%">
+                        <tr>
+ <th>S.NO</th>
+<th>  _id </th> 
+<th>descrptionOnCall      </th>        
+<th>callBackStartTime</th> 
+<th>callBackEndTime</th> 
+
+<th>agentid</th> 
+<th>customerMobNo</th> 
+<th>callbackStatus</th> 
+<th>parentid</th> 
+<th>createdAt</th> 
+<th>updatedAt</th> 
+<th>callhangupsource</th> 
+<th>durationCallEnd</th> 
+<th>durationCallStart </th> 
+                          <!-- <th *ngIf="isAdminBoolean">Edit </th>       
+                          <th *ngIf="isAdminBoolean">Delete</th> -->
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor ="let item of child; index as row">
+                          <th scope="row">{{row + 1}}</th>
+                          <!-- <td><img src={{item.productImage}} style="width:70px; height:60px">&nbsp;&nbsp;{{item.name}} </td>
+                          <td>{{item.brand}}</td>
+                          <td>{{item.quantity}}</td>
+                          <td>{{item.price}}</td> -->
+<td> {{item._id}}</td>
+<td>{{item.descrptionOnCall}}</td>
+<td>{{item.callBackStartTime}}</td>
+<td>{{item.callBackEndTime}}</td>
+
+<td>{{item.agentid}}</td>
+<td>{{item.customerMobNo}}</td>
+<td>{{item.callbackStatus}}</td>
+<td>{{item.parentid}}</td>
+<td>{{item.createdAt}}</td>
+<td>{{item.updatedAt}}</td>
+<td>{{item.callhangupsource}}</td>
+<td>{{item.durationCallEnd}}</td>
+<td>{{item.durationCallStart}}</td>
+                          <!-- <td> <button type="button" class="btn btn-warning" *ngIf="isAdminBoolean"  (click)="editProduct(item._id)">Edit</button></td>
+                          <td> <button type="button" class="btn btn-danger"  *ngIf="isAdminBoolean" (click)="deleteProduct(item._id)">Delete</button></td> -->
+                        </tr>
+                        </tbody>
+                      </table>
+        </div>
+      
+    </div>
+    
+  </div>
+  <!-- <div class="row  float-right">
+      <button type="button" class="btn btn-raised btn-warning mr-1" >
+        <i class="ft-x"></i> Cancel
+      </button>
+      <button type="button" class="btn btn-raised btn-primary" (click) = "onSave()">
+        <i class="fa fa-check-square-o"></i> Save
+      </button>
+    </div> -->

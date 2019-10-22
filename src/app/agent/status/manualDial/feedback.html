@@ -1,0 +1,242 @@
+    <!---------------------------------------------------------------------------------------------------------->
+ <section id="basic-form-layouts">
+    <div class="row text-left">
+      <div class="col-sm-12">
+        <div class="content-header" style="text-align:center">
+        <!-- <h2> Feedback </h2> -->
+        </div>
+      </div>
+    </div>
+    <div class="row text-left">
+      <div class="col-md-12">
+        <div class="card">
+
+          <div class="card-content">
+            <div class="px-3">
+              <form class="form" style="text-align:center">
+                <div class="form-body">
+                  <h4 class="form-section" style="text-align:center;padding:3%" ><i class="ft-user"></i> Feedback</h4>
+                  <div class="row">
+                        <div class="col">
+              
+                          <mat-form-field>
+                            <mat-label>Caller Number :</mat-label>
+                       
+                            <input matInput  [(ngModel)]="data.customerMobNo" name="customerMobNo" required>                
+                          </mat-form-field>
+                        </div>
+                        <div class="col">
+                
+                          <mat-form-field>
+                            <mat-label>Caller Name</mat-label>
+                          
+                            <input matInput placeholder="Caller Name"  [(ngModel)]="data.customerName" name="customerName" [value]="" required>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="row">
+                            <div class="col-md-6">
+                  
+                              <mat-form-field>
+                                <mat-label>Duration</mat-label>
+                                <input matInput  [(ngModel)]="data.callDuration" name="callDuration" required disabled>                       
+                              </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                          
+                            <mat-form-field>
+                                    <mat-label>Customer Interested</mat-label>
+                                    
+                                     <mat-select [(ngModel)]="data.isCustomerInterested" name="food" (ngModelChange)="onChange($event)" required>
+                                        <mat-option *ngFor="let item of Agent" [value]="item.value">
+                                          {{item.name}}
+                                        </mat-option>
+                                      </mat-select>
+                           </mat-form-field>
+                            </div>
+                          </div>
+<!--             
+                  <div class="row">
+                    <div class="col-md-6">
+               
+                      <mat-form-field>
+                        <mat-label>Campaign in Queue</mat-label>
+                        <input  matInput  placeholder="Campaign in Queue"   name="campaignInQueue" value="1" disabled>                             
+                      </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+             
+                      <mat-form-field>
+                        <mat-label>Campaign Completed</mat-label>
+                        <input  matInput  placeholder="Campaign Completed"   name="campaignCompleted" value="5" disabled>                             
+                      </mat-form-field>
+                    </div>
+                  </div> -->
+  
+                  <!-- <h4 class="form-section"><i class="ft-file-text"></i> Assign Agent</h4> -->
+  
+            
+<!--   
+                  <div class="row">
+          
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="projectinput6">Available Agent</label>
+                        <select id="projectinput6" name="budget" class="form-control">
+                          <option value="0" selected="" disabled="">Agent</option>
+                          <option value="1">Shruit</option>
+                          <option value="2">Ravi</option>
+                          <option value="3">Shivam</option>
+                          <option value="4">Raj</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div> -->
+  
+                  <div class="row">
+                      <div class="col-md-12" style="padding-left:10%; padding-right:10%">
+                  <mat-form-field style="width:100%">
+                    <mat-label>Add Remark</mat-label>
+                    <textarea matInput placeholder="Leave a comment"   [(ngModel)]="data.descrptionOnCall" name="descrptionOnCall" value="" required></textarea>                           
+                  </mat-form-field>
+                </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12" style="padding-left:10%; padding-right:10%">
+                            <mat-form-field *ngIf="select" style="width:100%">
+                                    <mat-label>CallBack Date</mat-label>
+                                    <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="data.startdate"  name="startdate">
+                                    <mat-datepicker-toggle matSuffix [for]="picker" (click)="selectDate(startdate)"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>   
+                            </mat-form-field> 
+                </div>
+                </div>
+
+                  <div class="row">
+                        <div class="col-md-6">
+                                <mat-form-field *ngIf="select">
+                                        <mat-label>Start Time</mat-label>
+                                      
+                                        <input matInput   type="time" placeholder="Choose start Time" 
+                                            name="callBackStartTime" [(ngModel)]="data.callBackStartTime" [value]="">
+                        
+                                </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                      
+                                <mat-form-field *ngIf="select">
+                                        <mat-label>End Time</mat-label>
+                                        <input matInput type="time" placeholder="Choose end Time" name="callBackEndTime"
+                                            [(ngModel)]="data.callBackEndTime" [value]="">
+                        
+                                    </mat-form-field>
+                        </div>
+                 </div>
+                </div>
+  
+                <div class="form-actions" style="padding:3%">
+                        <button mat-button [mat-dialog-close]="data" cdkFocusInitial class="mat-raised-button mat-primary"
+                        style="width:100px">Submit</button>
+                  <!-- <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+                    <i class="ft-x"></i> Cancel
+                  </button>
+                  <button type="button" class="btn btn-raised btn-raised btn-primary">
+                    <i class="fa fa-check-square-o"></i> Save
+                  </button> -->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</section>   
+
+<!----------------------------------------------OLD CODE--------------------------------->
+<!-- <h2 mat-dialog-title style="text-align: center">FeedBack</h2>
+<mat-dialog-content style="justify-content: center;">
+        <div class="px-3">
+          <form class="form">
+            <div class="form-body">
+              
+              <div class="row">
+                <div class="col">
+      
+                  <mat-form-field>
+                    <mat-label>Caller Number :</mat-label>
+               
+                    <input matInput style="max-width: 100px" [(ngModel)]="data.customerMobNo" name="customerMobNo" required>                
+                  </mat-form-field>
+                </div>
+                <div class="col">
+        
+                  <mat-form-field>
+                    <mat-label>Caller Name</mat-label>
+                  
+                    <input matInput placeholder="Caller Name" style="max-width: 100px" [(ngModel)]="data.name" name="name" [value]="" required>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+      
+                  <mat-form-field>
+                    <mat-label>Duration</mat-label>
+                    <input matInput style="max-width: 100px" [(ngModel)]="data.durationCallStart" name="durationCallStart" required>                       
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+              
+                <mat-form-field>
+                        <mat-label>Customer Interested</mat-label>
+                        
+                         <mat-select [(ngModel)]="data.customerInterested" name="food" (ngModelChange)="onChange($event)">
+                            <mat-option *ngFor="let item of Agent" [value]="item.value">
+                              {{item.name}}
+                            </mat-option>
+                          </mat-select>
+               </mat-form-field>
+                </div>
+              </div>
+
+              <mat-form-field >
+                    <mat-label> Description</mat-label>
+    
+                    <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" placeholder="Customer Interest"
+                        style="max-width: 300px" [(ngModel)]="data.descrptionOnCall" name="descrptionOnCall" [value]="" required></textarea>
+
+             </mat-form-field>
+         
+             <div class="row">
+                    <div class="col-md-6">
+                            <mat-form-field *ngIf="select">
+                                    <mat-label>Start Time</mat-label>
+                                  
+                                    <input matInput   type="time" placeholder="Choose start Time" 
+                                        name="callBackStartTime" [(ngModel)]="data.callBackStartTime" [value]="">
+                    
+                            </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                  
+                            <mat-form-field *ngIf="select">
+                                    <mat-label>End Time</mat-label>
+                                    <input matInput type="time" placeholder="Choose end Time" name="callBackEndTime"
+                                        [(ngModel)]="data.callBackEndTime" [value]="">
+                    
+                                </mat-form-field>
+                    </div>
+             </div>
+
+            </div>
+ 
+          </form>
+        </div>
+      </mat-dialog-content>
+      
+      <mat-dialog-actions style="text-align:center;display: flex;justify-content: center;">
+            <button mat-button [mat-dialog-close]="data" cdkFocusInitial class="mat-raised-button mat-primary"
+            style="width:100px">Submit</button>
+    </mat-dialog-actions>
+       -->

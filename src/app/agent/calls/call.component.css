@@ -1,0 +1,32 @@
+mat-list-item {
+    margin: 2% 2% 2% 2%;
+  }
+  
+  button{
+    background-color: #f5f5f5;
+    margin: 2% 2% 2% 2%;
+  }
+  
+  button.active{
+    background-color:mediumpurple;
+  }
+  
+
+
+/* table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+}
+ 
+mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+    max-height: 100px;
+}
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+   */

@@ -1,0 +1,74 @@
+#sidenav-container {
+  position: relative;
+  z-index: -1 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+/* #mat-toolbar {
+  position: relative;
+  z-index: -12;
+} */
+.example-toolbar {
+  padding: 0 14px;
+}
+
+.tbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+table {
+    width: 100%;
+  }
+
+  .add-files-btn {
+    float: right;
+  }
+  
+  :host {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  
+  .actions {
+    justify-content: flex-end;
+  }
+  
+  .container {
+    height: 100%;
+  }
+
+  .active-list-item {
+    color: #3F51B5 !important; /* Note: You could also use a custom theme */
+  }
+
+  
+#btn{
+  margin: 2% 2% 2% 2%;
+}
+
+button.active{
+  background-color:mediumpurple;
+}
+.is-active {
+  background-color: red;
+  margin:1% 1% 1% 1%;
+}
+
+@media screen and (max-width: 700px) and (min-width: 400px) { 
+  .heading-left { left: -0.5%; }
+}
+
+#profile{
+  width:200px;
+}
+
+button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}

@@ -1,0 +1,1350 @@
+<!-- <md-progress-bar mode="determinate" [value]="percentage" style="width:70%;"
+id="progressBar" name="progressBar" #progressBar></md-progress-bar> -->
+<!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
+<!-- <ng-progress></ng-progress>
+<input type="button" value="START" (click)="start()"/>
+<input type="button" value="STOP" (click)="stop()"/> -->
+<!-- <mat-progress-spinner value="90"></mat-progress-spinner> -->
+<!-- <mat-spinner *ngIf="showSpinner"></mat-spinner>
+<button (click)="loadData()">Load Data</button> -->
+<!-- 
+<div class='app'>
+
+  <div class='app-top'>
+    <button (click)='toggleVisible()'>toggle visible</button>
+    <button (click)='toggleWeekends()'>toggle weekends</button>
+    <button (click)='gotoPast()'>go to a date in the past</button>
+    (also, click a date/time to add an event)
+  </div>
+
+  <div class='app-calendar' *ngIf="calendarVisible">
+    <full-calendar
+      #calendar
+      defaultView="dayGridMonth"
+      [header]="{
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      }"
+      [plugins]="calendarPlugins"
+      [weekends]="calendarWeekends"
+      [events]="calendarEvents"
+      (dateClick)="handleDateClick($event)"
+    ></full-calendar>
+  </div>
+
+</div> -->
+
+
+<!-- <link rel="stylesheet" href="https://cdn.rawgit.com/benjamincharity/angular-keypad/v2.0.0/dist/angular-keypad.min.css" />
+<script src="https://cdn.rawgit.com/benjamincharity/angular-keypad/v2.0.0/dist/angular-keypad.min.js"></script>
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<mat-progress-bar mode="buffer"></mat-progress-bar> -->
+<!------------------------------------------------------------------------------------------------------>
+
+
+<!------------------------------------------------------------------------------------------------------>
+<!-- <div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>Card Content Here</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div> -->
+
+<!-- <div class="chart-container" style="position: relative; height:400px; width:500px">    
+  <canvas id="canvasLine">{{ LineChart }}</canvas>    
+</div>  -->
+<!------------------------------------Widgets---------------------------->
+
+<div style="width:100%; height:100%;background-color: #ecf0f5">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div>
+ <div class="row" style="width:100%;margin-top:1%">
+
+<div class="col">
+  <div class="card">
+      <div class="card-content" style="background-image: linear-gradient( to right, #008385, #00E7EB );">
+          <div class="media align-items-stretch">
+            <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+              <img src="../../assets/—Pngtree—agents_1261867@2x.png" style="width: 50px;  height: 40px;">
+            </div>
+              <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                  <h5>View All Agents</h5>
+                  <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col">
+    <div class="card">
+        <div class="card-content" style="background-image: linear-gradient( to right, #FF425C, #FF7588 );">
+            <div class="media align-items-stretch">
+                <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                  <img src="../../assets/ringing.png" style="width: 50px;  height: 40px; transform: rotate(10deg);">
+                
+                </div>
+                <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                    <h5>Agent Active on Call</h5>
+                    <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 25</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="col">
+      <div class="card">
+          <div class="card-content" style="background-image: linear-gradient( to right, #FF864A, #FFA87D );">
+              <div class="media align-items-stretch">
+                  <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                    <img src="../../assets/call-back@2x.png" style="width: 50px;  height: 40px;">
+                  </div>
+                  <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                      <h5>Agent On Call Back</h5>
+                      <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-content" style="background-image: linear-gradient( to right, #11A578, #32EAB2 );">
+                <div class="media align-items-stretch">
+                  <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                    <img src="../../assets/call-back@2x.png" style="width: 50px;  height: 40px;">
+                  </div>
+                    <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                        <h5>Agent on Break</h5>
+                        <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+<div class="row" style="width:100%;margin-top:1%">
+
+    <div class="col">
+      <div class="card">
+          <div class="card-content" style="background-image: linear-gradient( to right,#FF6347, #FF917E );">
+              <div class="media align-items-stretch">
+                <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                  <img src="../../assets/right.png" style="width: 50px;  height: 40px;">
+                </div>
+                  <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                      <h5>Successfully Call Placed</h5>
+                      <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-content" style="background-image: linear-gradient( to right, #00cc6a, #4cdb96);"> 
+                <div class="media align-items-stretch">
+                  <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                    <img src="../../assets/phone-hang-up@2x.png" style="width: 50px;  height: 40px;">
+                  </div>
+                    <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                        <h5>Call Not Pickup by Customer</h5>
+                        <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 25</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="col">
+          <div class="card">
+              <div class="card-content" style="background-image: linear-gradient( to right, #1AB0C3, #5AD9E9 );">
+                  <div class="media align-items-stretch">
+                      <div style="width:100px; height:90px">
+                        <i class="material-icons" style="font-size:58px;padding:15% 15% 15% 15%;color:white">group</i>
+                      </div>
+                      <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                          <h5>Products</h5>
+                          <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-content" style="background-image: linear-gradient( to right,#ef4f4f, #f37b7b  );">
+                    <div class="media align-items-stretch">
+                      <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                        <img src="../../assets/calendar-with-a-clock-time-tools (2)@2x.png" style="width: 50px;  height: 40px;">
+                      </div>
+                        <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                            <h5>Call back Schedule</h5>
+                            <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+</div> 
+
+<div class="chart-container" style="position: relative; height:400px; width:600px">    
+  <canvas id="canvasDoughnut">{{ DoughnutChart }}</canvas>    
+</div> 
+
+<div class="chart-container" style="position: relative; height:400px; width:700px">    
+  <canvas id="canvasBar">{{ BarChart }}</canvas>    
+</div> 
+
+
+<mat-card class="dashboard-card" style="">
+<div class="chart-container" style="position: relative; height:400px; width:50%">    
+    <canvas id="myChart" width="700px" height="200px"></canvas>
+  </div> 
+</mat-card>
+
+</div> 
+
+
+<!----------------------------------------------------------------------------------------------->
+<!-- <div class="mainDiv" style="background-color:#ecf0f5"> 
+  <div class="content-wrapper" style="padding: 1.8rem;">
+   <div class="content-header row">
+   
+   </div>
+   <div class="content-body">
+    <div class="row">
+      <div class="col-sm"> 
+          <div class="card">
+              <div class="card-content" style="background-image: linear-gradient( to right, #008385, #00E7EB );">
+                  <div class="media align-items-stretch">
+                    <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                      <img src="../../assets/—Pngtree—agents_1261867@2x.png" style="width: 50px;  height: 40px;">
+                    </div>
+                      <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                          <h5>View All Agents</h5>
+                          <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+                      </div>
+                  </div>
+              </div>
+          </div> </div>
+     <div class="col-sm">
+        <div class="card">
+            <div class="card-content" style="background-image: linear-gradient( to right, #FF425C, #FF7588 );">
+                <div class="media align-items-stretch">
+                    <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                      <img src="../../assets/ringing.png" style="width: 50px;  height: 40px; transform: rotate(10deg);">
+                    
+                    </div>
+                    <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                        <h5>Agent Active on Call</h5>
+                        <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 25</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="col-sm">
+        <div class="card">
+            <div class="card-content" style="background-image: linear-gradient( to right, #FF864A, #FFA87D );">
+                <div class="media align-items-stretch">
+                    <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                      <img src="../../assets/call-back@2x.png" style="width: 50px;  height: 40px;">
+                    </div>
+                    <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                        <h5>Agent On Call Back</h5>
+                        <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+                    </div>
+                </div>
+            </div>
+        </div> </div>
+     <div class="col-sm"> 
+        <div class="card">
+            <div class="card-content" style="background-image: linear-gradient( to right, #11A578, #32EAB2 );">
+                <div class="media align-items-stretch">
+                  <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                    <img src="../../assets/call-back@2x.png" style="width: 50px;  height: 40px;">
+                  </div>
+                    <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                        <h5>Agent on Break</h5>
+                        <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+    </div>
+    <div class= "row" style="margin-top:1%">
+        <div class="col-sm"> 
+            <div class="card">
+                <div class="card-content" style="background-image: linear-gradient( to right,#FF6347, #FF917E );">
+                    <div class="media align-items-stretch">
+                      <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                        <img src="../../assets/right.png" style="width: 50px;  height: 40px;">
+                      </div>
+                        <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                            <h5>Successfully Call Placed</h5>
+                            <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-content" style="background-image: linear-gradient( to right, #00cc6a, #4cdb96);"> 
+                    <div class="media align-items-stretch">
+                      <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                        <img src="../../assets/phone-hang-up@2x.png" style="width: 50px;  height: 40px;">
+                      </div>
+                        <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                            <h5>Call Not Pickup by Customer</h5>
+                            <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 25</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-content" style="background-image: linear-gradient( to right, #1AB0C3, #5AD9E9 );">
+                    <div class="media align-items-stretch">
+                        <div style="width:100px; height:90px">
+                          <i class="material-icons" style="font-size:58px;padding:15% 15% 15% 15%;color:white">group</i>
+                        </div>
+                        <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                            <h5>Products</h5>
+                            <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-content" style="background-image: linear-gradient( to right,#ef4f4f, #f37b7b  );">
+                    <div class="media align-items-stretch">
+                      <div style="width:100px; height:90px; padding: 5% 5% 5% 5%;">
+                        <img src="../../assets/calendar-with-a-clock-time-tools (2)@2x.png" style="width: 50px;  height: 40px;">
+                      </div>
+                        <div style="margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;" >
+                            <h5>Call back Schedule</h5>
+                            <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="row match-height" style="margin-top:1%">
+      <div  class="col-xl-8 col-lg-12">
+          <div class="card" style="width:100%; height:402px">
+           
+            
+              <div class="chart-container" style="position: relative; height:100%; width:100%; padding:2% 2% 2% 2%">    
+                  <canvas id="doubleBarChart" style="width:100%; height:100% ">{{ BarChart }}</canvas>  
+                </div> 
+       
+          </div>  
+    </div>
+    <div  class="col-xl-4 col-lg-12">
+        <div class="card" style="width:100%; height:402px">
+            <div class="card-header">
+                <h4 class="card-title" style="font-family: sans-serif; font-weight: none; color: gray;">Agent Status</h4>
+                <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="chart-container" style="position: relative; height:100%; width:100%">    
+                <canvas id="canvasDoughnut" >{{ DoughnutChart }}</canvas>    
+              </div> 
+          </div>  
+    </div>
+    </div>
+    <div class="row match-height" style="margin-top:1%">
+        <div  class="col-xl-4 col-lg-12">
+            <div class="card" style="width:100%; height:402px">
+                <div class="card-header">
+                  <h4 class="card-title" style="font-family: sans-serif; font-weight: none; color: gray;">Number of Scheduled Call Being Placed</h4>
+                  <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                  <div class="heading-elements">
+                      <ul class="list-inline mb-0">
+                          <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                          <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="card-container" style="padding-left: 1rem!important;">
+                <div id="recent-details" style="margin-right:5%">
+            
+                <a href="#" class="media border-0" style="padding: 1.2rem;   margin-top: 0;">
+                  <div class="media-left pr-1">
+                      <img class="media-object avatar avatar-sm rounded-circle" src="../../assets/Calling.png" style="width:50px; height:50px" >
+                  </div>
+                  <div class="media-body w-100" style="margin-left: 2%">
+                      <h5 class="list-group-item-heading">Number PickUp <span class="font-medium-4 float-right">1,0215</span></h5>
+                      <p class="list-group-item-text mb-0"><span class="badge badge-success">Call completed</span><span class="badge badge-warning ml-1"></span></p>
+                  </div>
+              </a>
+              <a href="#" class="media border-0" style="padding: 1.2rem;   margin-top: 0;">
+                <div class="media-left pr-1">
+                    <img class="media-object avatar avatar-sm rounded-circle" src="../../assets/CallRinging2.png" style="width:50px; height:50px" >
+                </div>
+                <div class="media-body w-100" style="margin-left: 2%">
+                    <h5 class="list-group-item-heading">Being Called <span class="font-medium-4 float-right">19</span></h5>
+                    <p class="list-group-item-text mb-0"><span class="badge badge-success">Call Running</span><span class="badge badge-warning ml-1">on the call</span></p>
+                </div>
+            </a>
+            <a href="#" class="media border-0" style="padding: 1.2rem;   margin-top: 0;">
+              <div class="media-left pr-1">
+                  <img class="media-object avatar avatar-sm rounded-circle" src="../../assets/WaitingForCall.png" style="width:50px; height:50px" >
+              </div>
+              <div class="media-body w-100" style="margin-left: 2%">
+                  <h5 class="list-group-item-heading">Another Call Back For Customer<span class="font-medium-4 float-right">215</span></h5>
+                  <p class="list-group-item-text mb-0"><span class="badge badge-success">Call in the Queue</span><span class="badge badge-warning ml-1">waiting</span></p>
+              </div>
+          </a>
+           
+                </div>
+              </div>
+            </div>  
+      </div>
+      <div  class="col-xl-4 col-lg-12">
+          <div class="card" style="width:100%; height:402px">
+              <div class="card-header">
+                  <h4 class="card-title" style="font-family: sans-serif; font-weight: none; color: gray;">Campaign Running Today</h4>
+                  <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                  <div class="heading-elements">
+                      <ul class="list-inline mb-0">
+                          <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                          <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="card-container" style="padding-left: 1rem!important;">
+                <div id="recent-details" style="margin-right:5%">
+              
+                <a href="#" class="media border-0" style="padding: 1.2rem;   margin-top: 0;">
+                  <div class="media-left pr-1">
+                      <img class="media-object avatar avatar-sm rounded-circle" src="../../assets/Calling.png" style="width:50px; height:50px" >
+                  </div>
+                  <div class="media-body w-100" style="margin-left: 2%">
+                      <h5 class="list-group-item-heading">Campaign Assigned to Manager <span class="font-medium-4 float-right">215</span></h5>
+                      <p class="list-group-item-text mb-0"><span class="badge badge-success">Assigned Campaign</span><span class="badge badge-warning ml-1"></span></p>
+                  </div>
+              </a>
+              <a href="#" class="media border-0" style="padding: 1.2rem;   margin-top: 0;">
+                <div class="media-left pr-1">
+                    <img class="media-object avatar avatar-sm rounded-circle" src="../../assets/CallRinging2.png" style="width:50px; height:50px" >
+                </div>
+                <div class="media-body w-100" style="margin-left: 2%">
+                    <h5 class="list-group-item-heading">No of Customer Finished with conference<span class="font-medium-4 float-right">19</span></h5>
+                    <p class="list-group-item-text mb-0"><span class="badge badge-success">Call Completed</span><span class="badge badge-warning ml-1"></span></p>
+                </div>
+            </a>
+            <a href="#" class="media border-0" style="padding: 1.2rem;   margin-top: 0;">
+              <div class="media-left pr-1">
+                  <img class="media-object avatar avatar-sm rounded-circle" src="../../assets/WaitingForCall.png" style="width:50px; height:50px" >
+              </div>
+              <div class="media-body w-100" style="margin-left: 2%">
+                  <h5 class="list-group-item-heading">No of Customer remaining for call<span class="font-medium-4 float-right">115</span></h5>
+                  <p class="list-group-item-text mb-0"><span class="badge badge-success">Remaining Customer</span><span class="badge badge-warning ml-1">Pending</span></p>
+              </div>
+          </a>
+              
+                </div>
+              </div>
+            </div>  
+      </div>
+      <div  class="col-xl-4 col-lg-12">
+        <div class="card" style="width:100%; height:402px;background-image: linear-gradient( to right,#008385 , #00E7EB );">
+            <div class="card-header">
+                <h4 class="card-title" style="font-family: sans-serif; font-weight: none; color: gray;">Extra field</h4>
+                <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>  
+    </div>
+      </div>
+   
+   </div>
+  
+  </div>
+ 
+ </div> --> 
+
+ <!-- <div>
+  
+    <div class="card" style="height: 961.5px;">
+				<div class="card-header">
+					<h4 class="card-title" id="basic-layout-form">Project Info</h4>
+					<a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+					<div class="heading-elements">
+						<ul class="list-inline mb-0">
+							<li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+							<li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+							<li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+							<li><a data-action="close"><i class="ft-x"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="card-content collapse show">
+					<div class="card-body">
+						<div class="card-text">
+							<p>This is the most basic and default form having form sections. To add form section use <code>.form-section</code> class with any heading tags. This form has the buttons on the bottom left corner which is the default position.</p>
+						</div>
+						<form class="form">
+							<div class="form-body">
+								<h4 class="form-section"><i class="ft-user"></i> Personal Info</h4>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="projectinput1">First Name</label>
+											<input type="text" id="projectinput1" class="form-control" placeholder="First Name" name="fname">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="projectinput2">Last Name</label>
+											<input type="text" id="projectinput2" class="form-control" placeholder="Last Name" name="lname">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="projectinput3">E-mail</label>
+											<input type="text" id="projectinput3" class="form-control" placeholder="E-mail" name="email">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="projectinput4">Contact Number</label>
+											<input type="text" id="projectinput4" class="form-control" placeholder="Phone" name="phone">
+										</div>
+									</div>
+								</div>
+
+								<h4 class="form-section"><i class="fa fa-paperclip"></i> Requirements</h4>
+
+								<div class="form-group">
+									<label for="companyName">Company</label>
+									<input type="text" id="companyName" class="form-control" placeholder="Company Name" name="company">
+								</div>
+
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="projectinput5">Interested in</label>
+											<select id="projectinput5" name="interested" class="form-control">
+												<option value="none" selected="" disabled="">Interested in</option>
+												<option value="design">design</option>
+												<option value="development">development</option>
+												<option value="illustration">illustration</option>
+												<option value="branding">branding</option>
+												<option value="video">video</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="projectinput6">Budget</label>
+											<select id="projectinput6" name="budget" class="form-control">
+												<option value="0" selected="" disabled="">Budget</option>
+												<option value="less than 5000$">less than 5000$</option>
+												<option value="5000$ - 10000$">5000$ - 10000$</option>
+												<option value="10000$ - 20000$">10000$ - 20000$</option>
+												<option value="more than 20000$">more than 20000$</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label>Select File</label>
+									<label id="projectinput7" class="file center-block">
+										<input type="file" id="file">
+										<span class="file-custom"></span>
+									</label>
+								</div>
+
+								<div class="form-group">
+									<label for="projectinput8">About Project</label>
+									<textarea id="projectinput8" rows="5" class="form-control" name="comment" placeholder="About Project"></textarea>
+								</div>
+							</div>
+
+							<div class="form-actions">
+								<button type="reset" class="btn btn-warning mr-1">
+									<i class="ft-x"></i> Cancel
+								</button>
+								<button type="submit" class="btn btn-primary">
+									<i class="fa fa-check-square-o"></i> Save
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+ </div> -->
+ <!---------------------------------------------------------------Try delete it--------------------------->
+<!--Shop Kirana-->
+
+<div class="row" >
+    <h4  style="padding-top: 20px; padding-left: 10px"><b>Add People</b></h4>
+    
+  </div>
+  <hr>
+  <div class="row">
+    
+    <div  class="col-6">
+        <div class="form-group">
+            <label for="name">First Name</label>
+            <input ng-required="true" type="text" class="form-control" id="firstname"  [(ngModel)]="people.PeopleFirstName" placeholder="First Name" >
+        </div>
+        <div class="form-group">
+            <label for="name">Last Name</label>
+            <input  type="text" class="form-control" id="lastname"  [(ngModel)]="people.PeopleLastName" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <label for="name">Email</label>
+            <input type="text" class="form-control" id="email"  [(ngModel)]="people.Email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="name">Password</label>
+            <input type="text" class="form-control" id="password"  [(ngModel)]="people.Password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="name">Mobile</label>
+            <input type="text" class="form-control" id="mobile"  [(ngModel)]="people.Mobile" placeholder="Mobile">
+        </div>
+        <div class="form-group">
+            <label for="name">Status</label>
+            <input  type="text" class="form-control" id="status"  [(ngModel)]="people.status" placeholder="Status">
+        </div>
+        <div class="form-group">
+          <label for="name">Select State</label>
+          <select id="state" name="state"  class="form-control" [(ngModel)]="people.Stateid"  placeholder="Select State">
+              <option *ngFor="let state of stateList" [ngValue]="state.Stateid">
+                {{ state.StateName }}
+              </option>
+            </select>
+  
+      </div>
+      <div class="form-group">
+        <label for="name">Select City</label>
+        <select id="city" name="city" class="form-control" [(ngModel)]="people.Cityid">
+            <option *ngFor="let city of cityList" [ngValue]="city.Cityid">
+              {{ city.CityName }}
+            </option>
+          </select>
+    </div>
+        <!-- <div class="checkbox mt-5">
+            <label>
+                <input ="vm.details.disable" type="checkbox" id="disable" ng-checked="vm.details.disable"> <b>Disable</b>
+            </label>
+        </div> -->
+    </div> 
+  
+  
+   <div  class="col-6">
+      
+      <div class="row">
+          <div class="col-4">
+            <div class="form-group">
+              <label for="name">Date Of Birth</label>
+              <!-- <p-calendar id="dob" name="dob" showIcon="true" placeholder="Date Of Birth"></p-calendar> -->
+              <!-- <input  type="text" class="form-control" id="" placeholder="Date Of Join"> -->
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-group">
+              <label for="name">Date Of Join</label>
+              <!-- <p-calendar id="dob" name="dob" showIcon="true" placeholder="Date Of Join"></p-calendar> -->
+            </div>
+          </div>
+          <div class="col-4">
+              <div class="form-group">
+                <label for="name">Date Of Marrige</label>
+                <!-- <p-calendar id="dob" name="dob" showIcon="true" placeholder="Date Of Marrige"></p-calendar> -->
+              </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name">Location</label>
+            <input type="text" class="form-control" id=""   [(ngModel)]="people.location"placeholder="Location">
+        </div>
+        <div class="form-group">
+            <label for="name">Department</label>
+            <select id="dept" name="dept"  class="form-control"  [(ngModel)]="people.Department">
+                <option *ngFor="let dept of departmentList" [ngValue]="dept.Department">
+                  {{ dept.Department }}
+                </option>
+              </select>
+        </div>
+        <div class="form-group">
+            <label for="name">Designation</label>
+            <select id="desg" name="desg"  class="form-control"[(ngModel)]="people.Desgination"  >
+                <option *ngFor="let designation of designationList" [ngValue]="designation.DesignationName">
+                  {{ designation.DesignationName }}
+                </option>
+              </select>
+        </div>
+        <div class="form-group">
+          <label for="name">Role</label>
+          <input type="text" class="form-control" id="role" placeholder="Role">
+      </div>
+      <div class="form-group">
+        <label for="name">Deposite Amount</label>
+        <input  type="text" class="form-control" id=""   [(ngModel)]="people.DepositAmount" placeholder="Deposite Amount">
+    </div>
+    <div class="form-group">
+      <label for="name">Select Warehouse</label>
+      <select id="wareid" name="wareid"  class="form-control" [(ngModel)]="people.WarehouseId" >
+          <option *ngFor="let warehouse of warehouseList" [ngValue]="warehouse.WarehouseId">
+            {{ warehouse.WarehouseName }}
+          </option>
+        </select>
+  </div>
+ 
+    </div>
+    
+  </div>
+  <div class="row  float-right">
+      <button type="button" class="btn btn-raised btn-warning mr-1" >
+        <i class="ft-x"></i> Cancel
+      </button>
+      <button type="button" class="btn btn-raised btn-primary" (click) = "onSave()">
+        <i class="fa fa-check-square-o"></i> Save
+      </button>
+    </div>
+
+
+ <!-------------------------------------------------------------------------------------------------------->
+ <div class="app-content content">
+    <div class="content-wrapper">
+      <div class="content-header row">
+      </div>
+      <div class="content-body"><!-- Stats -->
+<div class="row">
+  <div class="col-xl-3 col-lg-6 col-12">
+      <div class="card">
+          <div class="card-content">
+              <div class="media align-items-stretch">
+                  <div class="p-2 text-center bg-primary bg-darken-2">
+                      <i class="icon-camera font-large-2 white"></i>
+                  </div>
+                  <div class="p-2 bg-gradient-x-primary white media-body">
+                      <h5>Products</h5>
+                      <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 28</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-12">
+      <div class="card">
+          <div class="card-content">
+              <div class="media align-items-stretch">
+                  <div class="p-2 text-center bg-danger bg-darken-2">
+                      <i class="icon-user font-large-2 white"></i>
+                  </div>
+                  <div class="p-2 bg-gradient-x-danger white media-body">
+                      <h5>New Users</h5>
+                      <h5 class="text-bold-400 mb-0"><i class="ft-arrow-up"></i>1,238</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-12">
+      <div class="card">
+          <div class="card-content">
+              <div class="media align-items-stretch">
+                  <div class="p-2 text-center bg-warning bg-darken-2">
+                      <i class="icon-basket-loaded font-large-2 white"></i>
+                  </div>
+                  <div class="p-2 bg-gradient-x-warning white media-body">
+                      <h5>New Orders</h5>
+                      <h5 class="text-bold-400 mb-0"><i class="ft-arrow-down"></i> 4,658</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-12">
+      <div class="card">
+          <div class="card-content">
+              <div class="media align-items-stretch">
+                  <div class="p-2 text-center bg-success bg-darken-2">
+                      <i class="icon-wallet font-large-2 white"></i>
+                  </div>
+                  <div class="p-2 bg-gradient-x-success white media-body">
+                      <h5>Total Profit</h5>
+                      <h5 class="text-bold-400 mb-0"><i class="ft-arrow-up"></i> 5.6 M</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!--/ Stats -->
+<!--Product sale & buyers -->
+<div class="row match-height">
+  <div class="col-xl-8 col-lg-12">
+      <div class="card" style="height: 402px;">
+          <div class="card-header">
+              <h4 class="card-title">Products Sales</h4>
+              <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+              <div class="heading-elements">
+                  <ul class="list-inline mb-0">
+                      <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                      <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="card-content">
+              <div class="card-body">
+                  <div id="products-sales" class="height-300" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="300" version="1.1" width="1183.08" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.1875px; top: -0.625px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="32.859375" y="261" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">0</tspan></text><path fill="none" stroke="#e4e7ed" d="M45.359375,261.5H1158.08" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="213.8" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.9953125000000114">60</tspan></text><path fill="none" stroke="#e4e7ed" d="M45.359375,213.5H1158.08" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="166.60000000000002" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.9984375000000227">120</tspan></text><path fill="none" stroke="#e4e7ed" d="M45.359375,166.5H1158.08" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="119.4" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.001562500000006">180</tspan></text><path fill="none" stroke="#e4e7ed" d="M45.359375,119.5H1158.08" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="72.20000000000002" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.004687500000017">240</tspan></text><path fill="none" stroke="#e4e7ed" d="M45.359375,72.5H1158.08" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">300</tspan></text><path fill="none" stroke="#e4e7ed" d="M45.359375,25.5H1158.08" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="1158.08" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Dec</tspan></text><text x="1058.1350336826347" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Nov</tspan></text><text x="954.8585684880239" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Oct</tspan></text><text x="854.9136021706587" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Sep</tspan></text><text x="751.6371369760479" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Aug</tspan></text><text x="648.3606717814371" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Jul</tspan></text><text x="548.4157054640718" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Jun</tspan></text><text x="445.1392402694611" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">May</tspan></text><text x="345.1942739520958" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Apr</tspan></text><text x="241.91780875748503" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Mar</tspan></text><text x="148.63584019461078" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Feb</tspan></text><text x="45.359375" y="273.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Jan</tspan></text><path fill="#0bcfd2" stroke="none" d="M45.359375,261C71.17849129865269,213.8,122.81672389595809,72.20000000000002,148.63584019461078,72.20000000000002C171.95633233532934,72.20000000000002,218.59731661676648,238.6,241.91780875748503,261C267.7369250561377,261,319.3751576534431,261,345.1942739520958,261C370.1805155314371,261,420.1529986901198,261,445.1392402694611,261C470.9583565681138,261,522.5965891654191,261,548.4157054640718,261C573.4019470434132,261,623.3744302020957,261,648.3606717814371,261C674.1797880800898,253.00437158469944,725.8180206773952,198.06666666666666,751.6371369760479,198.06666666666666C777.4562532747007,198.06666666666666,829.094485872006,253.00437158469944,854.9136021706587,261C879.89984375,261,929.8723269086827,261,954.8585684880239,261C980.6776847866767,231.01639344262296,1032.315917383982,25,1058.1350336826347,25C1083.121275261976,25,1133.0937584206586,202,1158.08,261L1158.08,261L45.359375,261Z" fill-opacity="0.9" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0.9;"></path><path fill="none" stroke="#00b5b8" d="M45.359375,261C71.17849129865269,213.8,122.81672389595809,72.20000000000002,148.63584019461078,72.20000000000002C171.95633233532934,72.20000000000002,218.59731661676648,238.6,241.91780875748503,261C267.7369250561377,261,319.3751576534431,261,345.1942739520958,261C370.1805155314371,261,420.1529986901198,261,445.1392402694611,261C470.9583565681138,261,522.5965891654191,261,548.4157054640718,261C573.4019470434132,261,623.3744302020957,261,648.3606717814371,261C674.1797880800898,253.00437158469944,725.8180206773952,198.06666666666666,751.6371369760479,198.06666666666666C777.4562532747007,198.06666666666666,829.094485872006,253.00437158469944,854.9136021706587,261C879.89984375,261,929.8723269086827,261,954.8585684880239,261C980.6776847866767,231.01639344262296,1032.315917383982,25,1058.1350336826347,25C1083.121275261976,25,1133.0937584206586,202,1158.08,261" stroke-width="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="45.359375" cy="261" r="0" fill="#00b5b8" stroke="#00b5b8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="148.63584019461078" cy="72.20000000000002" r="0" fill="#00b5b8" stroke="#00b5b8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="241.91780875748503" cy="261" r="0" fill="#00b5b8" stroke="#00b5b8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="345.1942739520958" cy="261" r="0" fill="#00b5b8" stroke="#00b5b8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="445.1392402694611" cy="261" r="0" fill="#00b5b8" stroke="#00b5b8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="548.4157054640718" cy="261" r="0" fill="#00b5b8" stroke="#00b5b8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="648.3606717814371" cy="261" r="0" fill="#00b5b8" stroke="#00b5b8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="751.6371369760479" cy="198.06666666666666" r="0" fill="#00b5b8" stroke="#00b5b8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="854.9136021706587" cy="261" r="0" fill="#00b5b8" stroke="#00b5b8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="954.8585684880239" cy="261" r="0" fill="#00b5b8" stroke="#00b5b8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="1058.1350336826347" cy="25" r="0" fill="#00b5b8" stroke="#00b5b8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="1158.08" cy="261" r="0" fill="#00b5b8" stroke="#00b5b8" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><path fill="#f7bc9d" stroke="none" d="M45.359375,261C71.17849129865269,261,122.81672389595809,261,148.63584019461078,261C171.95633233532934,261,218.59731661676648,261,241.91780875748503,261C267.7369250561377,241.36666666666667,319.3751576534431,114.03196721311475,345.1942739520958,111.53333333333333C370.1805155314371,109.11530054644808,420.1529986901198,237.46448087431696,445.1392402694611,241.33333333333334C470.9583565681138,245.3311475409836,522.5965891654191,140.5013661202186,548.4157054640718,143C573.4019470434132,145.41803278688525,623.3744302020957,246.49180327868854,648.3606717814371,261C674.1797880800898,261,725.8180206773952,261,751.6371369760479,261C777.4562532747007,261,829.094485872006,261,854.9136021706587,261C879.89984375,261,929.8723269086827,261,954.8585684880239,261C980.6776847866767,261,1032.315917383982,261,1058.1350336826347,261C1083.121275261976,261,1133.0937584206586,261,1158.08,261L1158.08,261L45.359375,261Z" fill-opacity="0.9" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0.9;"></path><path fill="none" stroke="#fa8e57" d="M45.359375,261C71.17849129865269,261,122.81672389595809,261,148.63584019461078,261C171.95633233532934,261,218.59731661676648,261,241.91780875748503,261C267.7369250561377,241.36666666666667,319.3751576534431,114.03196721311475,345.1942739520958,111.53333333333333C370.1805155314371,109.11530054644808,420.1529986901198,237.46448087431696,445.1392402694611,241.33333333333334C470.9583565681138,245.3311475409836,522.5965891654191,140.5013661202186,548.4157054640718,143C573.4019470434132,145.41803278688525,623.3744302020957,246.49180327868854,648.3606717814371,261C674.1797880800898,261,725.8180206773952,261,751.6371369760479,261C777.4562532747007,261,829.094485872006,261,854.9136021706587,261C879.89984375,261,929.8723269086827,261,954.8585684880239,261C980.6776847866767,261,1032.315917383982,261,1058.1350336826347,261C1083.121275261976,261,1133.0937584206586,261,1158.08,261" stroke-width="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="45.359375" cy="261" r="0" fill="#fa8e57" stroke="#fa8e57" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="148.63584019461078" cy="261" r="0" fill="#fa8e57" stroke="#fa8e57" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="241.91780875748503" cy="261" r="0" fill="#fa8e57" stroke="#fa8e57" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="345.1942739520958" cy="111.53333333333333" r="0" fill="#fa8e57" stroke="#fa8e57" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="445.1392402694611" cy="241.33333333333334" r="0" fill="#fa8e57" stroke="#fa8e57" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="548.4157054640718" cy="143" r="0" fill="#fa8e57" stroke="#fa8e57" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="648.3606717814371" cy="261" r="0" fill="#fa8e57" stroke="#fa8e57" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="751.6371369760479" cy="261" r="0" fill="#fa8e57" stroke="#fa8e57" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="854.9136021706587" cy="261" r="0" fill="#fa8e57" stroke="#fa8e57" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="954.8585684880239" cy="261" r="0" fill="#fa8e57" stroke="#fa8e57" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="1058.1350336826347" cy="261" r="0" fill="#fa8e57" stroke="#fa8e57" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="1158.08" cy="261" r="0" fill="#fa8e57" stroke="#fa8e57" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><path fill="#f2a1ad" stroke="none" d="M45.359375,261C71.17849129865269,261,122.81672389595809,261,148.63584019461078,261C171.95633233532934,261,218.59731661676648,261,241.91780875748503,261C267.7369250561377,261,319.3751576534431,261,345.1942739520958,261C370.1805155314371,253.2622950819672,420.1529986901198,198.06666666666666,445.1392402694611,198.06666666666666C470.9583565681138,198.06666666666666,522.5965891654191,253.00437158469944,548.4157054640718,261C573.4019470434132,261,623.3744302020957,261,648.3606717814371,261C674.1797880800898,261,725.8180206773952,261,751.6371369760479,261C777.4562532747007,261,829.094485872006,261,854.9136021706587,261C879.89984375,246.49180327868854,929.8723269086827,143,954.8585684880239,143C980.6776847866767,143,1032.315917383982,246.00819672131146,1058.1350336826347,261C1083.121275261976,261,1133.0937584206586,261,1158.08,261L1158.08,261L45.359375,261Z" fill-opacity="0.9" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0.9;"></path><path fill="none" stroke="#f25e75" d="M45.359375,261C71.17849129865269,261,122.81672389595809,261,148.63584019461078,261C171.95633233532934,261,218.59731661676648,261,241.91780875748503,261C267.7369250561377,261,319.3751576534431,261,345.1942739520958,261C370.1805155314371,253.2622950819672,420.1529986901198,198.06666666666666,445.1392402694611,198.06666666666666C470.9583565681138,198.06666666666666,522.5965891654191,253.00437158469944,548.4157054640718,261C573.4019470434132,261,623.3744302020957,261,648.3606717814371,261C674.1797880800898,261,725.8180206773952,261,751.6371369760479,261C777.4562532747007,261,829.094485872006,261,854.9136021706587,261C879.89984375,246.49180327868854,929.8723269086827,143,954.8585684880239,143C980.6776847866767,143,1032.315917383982,246.00819672131146,1058.1350336826347,261C1083.121275261976,261,1133.0937584206586,261,1158.08,261" stroke-width="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="45.359375" cy="261" r="0" fill="#f25e75" stroke="#f25e75" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="148.63584019461078" cy="261" r="0" fill="#f25e75" stroke="#f25e75" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="241.91780875748503" cy="261" r="0" fill="#f25e75" stroke="#f25e75" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="345.1942739520958" cy="261" r="0" fill="#f25e75" stroke="#f25e75" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="445.1392402694611" cy="198.06666666666666" r="0" fill="#f25e75" stroke="#f25e75" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="548.4157054640718" cy="261" r="0" fill="#f25e75" stroke="#f25e75" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="648.3606717814371" cy="261" r="0" fill="#f25e75" stroke="#f25e75" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="751.6371369760479" cy="261" r="0" fill="#f25e75" stroke="#f25e75" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="854.9136021706587" cy="261" r="0" fill="#f25e75" stroke="#f25e75" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="954.8585684880239" cy="143" r="0" fill="#f25e75" stroke="#f25e75" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="1058.1350336826347" cy="261" r="0" fill="#f25e75" stroke="#f25e75" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="1158.08" cy="261" r="0" fill="#f25e75" stroke="#f25e75" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="left: 504.4px; top: 157px; display: none;"><div class="morris-hover-row-label">Jun</div><div class="morris-hover-point" style="color: #689bc3">
+Electronics:
+0
+</div><div class="morris-hover-point" style="color: #a2b3bf">
+Apparel:
+150
+</div><div class="morris-hover-point" style="color: #64b764">
+Decor:
+0
+</div></div></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-xl-4 col-lg-12">
+      <div class="card" style="height: 402px;">
+          <div class="card-header">
+              <h4 class="card-title">Recent Buyers</h4>
+              <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+              <div class="heading-elements">
+                  <ul class="list-inline mb-0">
+                      <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="card-content px-1">
+              <div id="recent-buyers" class="media-list height-300 position-relative ps ps--active-y">
+                  <a href="#" class="media border-0">
+                      <div class="media-left pr-1">
+                          <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-7.png" alt="Generic placeholder image">
+                          <i></i>
+                          </span>
+                      </div>
+                      <div class="media-body w-100">
+                          <h6 class="list-group-item-heading">Kristopher Candy <span class="font-medium-4 float-right pt-1">$1,021</span></h6>
+                          <p class="list-group-item-text mb-0"><span class="badge badge-primary">Electronics</span><span class="badge badge-warning ml-1">Decor</span></p>
+                      </div>
+                  </a>
+                  <a href="#" class="media border-0">
+                      <div class="media-left pr-1">
+                          <span class="avatar avatar-md avatar-away"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-8.png" alt="Generic placeholder image">
+                          <i></i>
+                          </span>
+                      </div>
+                      <div class="media-body w-100">
+                          <h6 class="list-group-item-heading">Lawrence Fowler <span class="font-medium-4 float-right pt-1">$2,021</span></h6>
+                          <p class="list-group-item-text mb-0"><span class="badge badge-danger">Appliances</span></p>
+                      </div>
+                  </a>
+                  <a href="#" class="media border-0">
+                      <div class="media-left pr-1">
+                          <span class="avatar avatar-md avatar-busy"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-9.png" alt="Generic placeholder image">
+                          <i></i>
+                          </span>
+                      </div>
+                      <div class="media-body w-100">
+                          <h6 class="list-group-item-heading">Linda Olson <span class="font-medium-4 float-right pt-1">$1,112</span></h6>
+                          <p class="list-group-item-text mb-0"><span class="badge badge-primary">Electronics</span> <span class="badge badge-success ml-1">Office</span></p>
+                      </div>
+                  </a>
+                  <a href="#" class="media border-0">
+                      <div class="media-left pr-1">
+                          <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-10.png" alt="Generic placeholder image">
+                          <i></i>
+                          </span>
+                      </div>
+                      <div class="media-body w-100">
+                          <h6 class="list-group-item-heading">Roy Clark <span class="font-medium-4 float-right pt-1">$2,815</span></h6>
+                          <p class="list-group-item-text mb-0"><span class="badge badge-warning">Decor</span> <span class="badge badge-danger ml-1">Appliances</span></p>
+                      </div>
+                  </a>
+                  <a href="#" class="media border-0">
+                      <div class="media-left pr-1">
+                          <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-11.png" alt="Generic placeholder image">
+                          <i></i>
+                          </span>
+                      </div>
+                      <div class="media-body w-100">
+                          <h6 class="list-group-item-heading">Kristopher Candy <span class="font-medium-4 float-right pt-1">$2,021</span></h6>
+                          <p class="list-group-item-text mb-0"><span class="badge badge-primary">Electronics</span><span class="badge badge-warning ml-1">Decor</span></p>
+                      </div>
+                  </a>
+                  <a href="#" class="media border-0">
+                      <div class="media-left pr-1">
+                          <span class="avatar avatar-md avatar-away"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-12.png" alt="Generic placeholder image">
+                          <i></i>
+                          </span>
+                      </div>
+                      <div class="media-body w-100">
+                          <h6 class="list-group-item-heading">Lawrence Fowler <span class="font-medium-4 float-right pt-1">$1,321</span></h6>
+                          <p class="list-group-item-text mb-0"><span class="badge badge-danger">Appliances</span></p>
+                      </div>
+                  </a>
+              <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 300px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 191px;"></div></div></div>
+          </div>
+      </div>
+  </div>
+</div>
+<!--/ Product sale & buyers -->
+<!--Recent Orders & Monthly Salse -->
+<div class="row match-height">
+  <div class="col-xl-8 col-lg-12">
+      <div class="card" style="height: 387.266px;">
+          <div class="card-header">
+              <h4 class="card-title">Recent Orders</h4>
+              <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+              <div class="heading-elements">
+                  <ul class="list-inline mb-0">
+                      <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                      <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="card-content">
+              <div class="card-body">
+                  <p>Total paid invoices 240, unpaid 150. <span class="float-right"><a href="project-summary.html" target="_blank">Invoice Summary <i class="ft-arrow-right"></i></a></span></p>
+              </div>
+              <div class="table-responsive">
+                  <table id="recent-orders" class="table table-hover mb-0 ps-container ps-theme-default">
+                      <thead>
+                          <tr>
+                              <th>SKU</th>
+                              <th>Invoice#</th>
+                              <th>Customer Name</th>
+                              <th>Status</th>
+                              <th>Amount</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td class="text-truncate">PO-10521</td>
+                              <td class="text-truncate"><a href="#">INV-001001</a></td>
+                              <td class="text-truncate">Elizabeth W.</td>
+                              <td class="text-truncate"><span class="badge badge-success">Paid</span></td>
+                              <td class="text-truncate">$ 1200.00</td>
+                          </tr>
+                          <tr>
+                              <td class="text-truncate">PO-532521</td>
+                              <td class="text-truncate"><a href="#">INV-01112</a></td>
+                              <td class="text-truncate">Doris R.</td>
+                              <td class="text-truncate"><span class="badge badge-warning">Overdue</span></td>
+                              <td class="text-truncate">$ 5685.00</td>
+                          </tr>
+                          <tr>
+                              <td class="text-truncate">PO-05521</td>
+                              <td class="text-truncate"><a href="#">INV-001012</a></td>
+                              <td class="text-truncate">Andrew D.</td>
+                              <td class="text-truncate"><span class="badge badge-success">Paid</span></td>
+                              <td class="text-truncate">$ 152.00</td>
+                          </tr>
+                          <tr>
+                              <td class="text-truncate">PO-15521</td>
+                              <td class="text-truncate"><a href="#">INV-001401</a></td>
+                              <td class="text-truncate">Megan S.</td>
+                              <td class="text-truncate"><span class="badge badge-success">Paid</span></td>
+                              <td class="text-truncate">$ 1450.00</td>
+                          </tr>
+                          <tr>
+                              <td class="text-truncate">PO-32521</td>
+                              <td class="text-truncate"><a href="#">INV-008101</a></td>
+                              <td class="text-truncate">Walter R.</td>
+                              <td class="text-truncate"><span class="badge badge-warning">Overdue</span></td>
+                              <td class="text-truncate">$ 685.00</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-xl-4 col-lg-12">
+      <div class="card" style="height: 387.266px;">
+          <div class="card-content">
+              <div class="card-body sales-growth-chart">
+                  <div id="monthly-sales" class="height-250" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="250" version="1.1" width="555.531" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.265625px; top: -0.875px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="42.859375" y="211" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#bfbfbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">0</tspan></text><path fill="none" stroke="#e4e7ed" d="M55.359375,211.5H530.531" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="42.859375" y="164.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#bfbfbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">750</tspan></text><path fill="none" stroke="#e4e7ed" d="M55.359375,164.5H530.531" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="42.859375" y="118" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#bfbfbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">1,500</tspan></text><path fill="none" stroke="#e4e7ed" d="M55.359375,118.5H530.531" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="42.859375" y="71.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#bfbfbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">2,250</tspan></text><path fill="none" stroke="#e4e7ed" d="M55.359375,71.5H530.531" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="42.859375" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#bfbfbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">3,000</tspan></text><path fill="none" stroke="#e4e7ed" d="M55.359375,25.5H530.531" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="510.7321822916667" y="223.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#bfbfbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Dec</tspan></text><text x="431.53691145833335" y="223.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#bfbfbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Oct</tspan></text><text x="352.34164062499997" y="223.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#bfbfbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Aug</tspan></text><text x="273.14636979166664" y="223.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#bfbfbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Jun</tspan></text><text x="193.95109895833332" y="223.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#bfbfbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Apr</tspan></text><text x="114.755828125" y="223.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#bfbfbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4">Feb</tspan></text><rect x="69.21854739583333" y="97.23" width="11.879290624999998" height="113.77" rx="0" ry="0" fill="#00b5b8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="108.81618281249999" y="64.928" width="11.879290624999998" height="146.072" rx="0" ry="0" fill="#00b5b8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="148.41381822916665" y="120.542" width="11.879290624999998" height="90.458" rx="0" ry="0" fill="#00b5b8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="188.0114536458333" y="131.082" width="11.879290624999998" height="79.918" rx="0" ry="0" fill="#00b5b8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="227.60908906249998" y="108.886" width="11.879290624999998" height="102.114" rx="0" ry="0" fill="#00b5b8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="267.20672447916667" y="77.328" width="11.879290624999998" height="133.672" rx="0" ry="0" fill="#00b5b8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="306.80435989583333" y="97.23" width="11.879290624999998" height="113.77" rx="0" ry="0" fill="#00b5b8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="346.4019953125" y="64.928" width="11.879290624999998" height="146.072" rx="0" ry="0" fill="#00b5b8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="385.99963072916665" y="120.542" width="11.879290624999998" height="90.458" rx="0" ry="0" fill="#00b5b8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="425.5972661458333" y="131.082" width="11.879290624999998" height="79.918" rx="0" ry="0" fill="#00b5b8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="465.1949015625" y="108.886" width="11.879290624999998" height="102.114" rx="0" ry="0" fill="#00b5b8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="504.79253697916664" y="77.328" width="11.879290624999998" height="133.672" rx="0" ry="0" fill="#00b5b8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect></svg><div class="morris-hover morris-default-style" style="display: none;"></div></div>
+              </div>
+          </div>
+          <div class="card-footer">
+              <div class="chart-title mb-1 text-center">
+                  <h6>Total monthly Sales.</h6>
+              </div>
+              <div class="chart-stats text-center">
+                  <a href="#" class="btn btn-sm btn-primary mr-1">Statistics <i class="ft-bar-chart"></i></a> <span class="text-muted">for the last year.</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!--/Recent Orders & Monthly Salse -->
+<!-- Social & Weather -->
+<div class="row match-height">
+  <div class="col-xl-4 col-lg-12">
+      <div class="card bg-gradient-x-danger" style="height: 220px;">
+          <div class="card-content">
+              <div class="card-body">
+                  <div class="animated-weather-icons text-center float-left">
+                      <svg version="1.1" id="cloudHailAlt2" class="climacon climacon_cloudHailAlt climacon-blue-grey climacon-darken-2 height-100" viewBox="15 15 70 70">
+                          <g class="climacon_iconWrap climacon_iconWrap-cloudHailAlt">
+                              <g class="climacon_wrapperComponent climacon_wrapperComponent-hailAlt">
+                                  <g class="climacon_component climacon_component-stroke climacon_component-stroke_hailAlt climacon_component-stroke_hailAlt-left">
+                                      <circle cx="42" cy="65.498" r="2"></circle>
+                                  </g>
+                                  <g class="climacon_component climacon_component-stroke climacon_component-stroke_hailAlt climacon_component-stroke_hailAlt-middle">
+                                      <circle cx="49.999" cy="65.498" r="2"></circle>
+                                  </g>
+                                  <g class="climacon_component climacon_component-stroke climacon_component-stroke_hailAlt climacon_component-stroke_hailAlt-right">
+                                      <circle cx="57.998" cy="65.498" r="2"></circle>
+                                  </g>
+                                  <g class="climacon_component climacon_component-stroke climacon_component-stroke_hailAlt climacon_component-stroke_hailAlt-left">
+                                      <circle cx="42" cy="65.498" r="2"></circle>
+                                  </g>
+                                  <g class="climacon_component climacon_component-stroke climacon_component-stroke_hailAlt climacon_component-stroke_hailAlt-middle">
+                                      <circle cx="49.999" cy="65.498" r="2"></circle>
+                                  </g>
+                                  <g class="climacon_component climacon_component-stroke climacon_component-stroke_hailAlt climacon_component-stroke_hailAlt-right">
+                                      <circle cx="57.998" cy="65.498" r="2"></circle>
+                                  </g>
+                              </g>
+                              <g class="climacon_wrapperComponent climacon_wrapperComponent-cloud">
+                                  <path class="climacon_component climacon_component-stroke climacon_component-stroke_cloud" d="M63.999,64.941v-4.381c2.39-1.384,3.999-3.961,3.999-6.92c0-4.417-3.581-8-7.998-8c-1.602,0-3.084,0.48-4.334,1.291c-1.23-5.317-5.974-9.29-11.665-9.29c-6.626,0-11.998,5.372-11.998,11.998c0,3.549,1.55,6.728,3.999,8.924v4.916c-4.776-2.768-7.998-7.922-7.998-13.84c0-8.835,7.162-15.997,15.997-15.997c6.004,0,11.229,3.311,13.966,8.203c0.663-0.113,1.336-0.205,2.033-0.205c6.626,0,11.998,5.372,11.998,12C71.998,58.863,68.656,63.293,63.999,64.941z"></path>
+                              </g>
+                          </g>
+                      </svg>
+                  </div>
+                  <div class="weather-details text-center">
+                      <span class="block white darken-1">Snow</span>
+                      <span class="font-large-2 block white darken-4">-5°</span>
+                      <span class="font-medium-4 text-bold-500 white darken-1">London, UK</span>
+                  </div>
+              </div>
+              <div class="card-footer bg-gradient-x-danger border-0">
+                  <div class="row">
+                      <div class="col-4 text-center display-table-cell white">
+                          <i class="me-wind font-large-1 lighten-3 align-middle"></i> <span class="align-middle">2MPH</span>
+                      </div>
+                      <div class="col-4 text-center display-table-cell white">
+                          <i class="me-sun2 font-large-1 lighten-3 align-middle"></i> <span class="align-middle">2%</span>
+                      </div>
+                      <div class="col-4 text-center display-table-cell white">
+                          <i class="me-thermometer font-large-1 lighten-3 align-middle"></i> <span class="align-middle">13.0°</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-xl-4 col-lg-12">
+      <div class="card bg-gradient-x-info white" style="height: 220px;">
+          <div class="card-content">
+              <div class="card-body text-center">
+                  <div class="mb-2">
+                      <i class="fa fa-twitter font-large-2"></i>
+                  </div>
+                  <div class="unslider"><div class="tweet-slider unslider-horizontal" style="position: relative; overflow: hidden;">
+                      <ul class="unslider-wrap unslider-carousel" style="width: 600%; margin-left: -100%; left: -300%;">
+                          <li class="unslider-clone" style="width: 16.6667%;">Are there <span class="yellow">#common-sense</span> facts related to your business? Combine them with a great photo.
+                              <p class="text-italic pt-1">- John Doe</p>
+                          </li><li class="" style="width: 16.6667%;">Congratulations to Rob Jones in accounting for winning our <span class="yellow">#NFL</span> football pool!
+                              <p class="text-italic pt-1">- John Doe</p>
+                          </li>
+                          <li style="width: 16.6667%;" class="">Contests are a great thing to partner on. Partnerships immediately <span class="yellow">#DOUBLE</span> the reach.
+                              <p class="text-italic pt-1">- John Doe</p>
+                          </li>
+                          <li style="width: 16.6667%;" class="">Puns, humor, and quotes are great content on <span class="yellow">#Twitter</span>. Find some related to your business.
+                              <p class="text-italic pt-1">- John Doe</p>
+                          </li>
+                          <li style="width: 16.6667%;" class="unslider-active">Are there <span class="yellow">#common-sense</span> facts related to your business? Combine them with a great photo.
+                              <p class="text-italic pt-1">- John Doe</p>
+                          </li><li class="unslider-clone" style="width: 16.6667%;">Congratulations to Rob Jones in accounting for winning our <span class="yellow">#NFL</span> football pool!
+                              <p class="text-italic pt-1">- John Doe</p>
+                          </li>
+                      </ul>
+                  </div></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-xl-4 col-lg-12">
+      <div class="card bg-gradient-x-primary white" style="height: 220px;">
+          <div class="card-content">
+              <div class="card-body text-center">
+                  <div class="mb-2">
+                      <i class="fa fa-facebook font-large-2"></i>
+                  </div>
+                  <div class="unslider"><div class="fb-post-slider unslider-horizontal" style="position: relative; overflow: hidden;">
+                      <ul class="unslider-wrap unslider-carousel" style="width: 600%; margin-left: -100%; left: -100%;">
+                          <li class="unslider-clone" style="width: 16.6667%;">Are there #common-sense facts related to your business? Combine them with a great photo.
+                              <p class="text-italic pt-1">- John Doe</p>
+                          </li><li class="" style="width: 16.6667%;">Congratulations to Rob Jones in accounting for winning our #NFL football pool!
+                              <p class="text-italic pt-1">- John Doe</p>
+                          </li>
+                          <li style="width: 16.6667%;" class="unslider-active">Contests are a great thing to partner on. Partnerships immediately #DOUBLE the reach.
+                              <p class="text-italic pt-1">- John Doe</p>
+                          </li>
+                          <li style="width: 16.6667%;" class="">Puns, humor, and quotes are great content on #Twitter. Find some related to your business.
+                              <p class="text-italic pt-1">- John Doe</p>
+                          </li>
+                          <li style="width: 16.6667%;" class="">Are there #common-sense facts related to your business? Combine them with a great photo.
+                              <p class="text-italic pt-1">- John Doe</p>
+                          </li><li class="unslider-clone" style="width: 16.6667%;">Congratulations to Rob Jones in accounting for winning our #NFL football pool!
+                              <p class="text-italic pt-1">- John Doe</p>
+                          </li>
+                      </ul>
+                  </div></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!--/ Social & Weather -->
+<!-- Basic Horizontal Timeline -->
+<div class="row match-height">
+  <div class="col-xl-8 col-lg-12">
+      <div class="card" style="height: 687.141px;">
+          <div class="card-header">
+              <h4 class="card-title">Horizontal Timeline</h4>
+              <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+              <div class="heading-elements">
+                  <ul class="list-inline mb-0">
+                      <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="card-content">
+              <div class="card-body">
+                  <div class="card-text">
+                      <section class="cd-horizontal-timeline loaded">
+                          <div class="timeline">
+                              <div class="events-wrapper">
+                                  <div class="events" style="width: 1140px;">
+                                      <ol>
+                                          <li><a href="#0" data-date="16/01/2015" class="selected" style="left: 120px;">16 Jan</a></li>
+                                          <li><a href="#0" data-date="28/02/2015" style="left: 300px;">28 Feb</a></li>
+                                          <li><a href="#0" data-date="20/04/2015" style="left: 480px;">20 Mar</a></li>
+                                          <li><a href="#0" data-date="20/05/2015" style="left: 600px;">20 May</a></li>
+                                          <li><a href="#0" data-date="09/07/2015" style="left: 780px;">09 Jul</a></li>
+                                          <li><a href="#0" data-date="30/08/2015" style="left: 960px;">30 Aug</a></li>
+                                          <li><a href="#0" data-date="15/09/2015" style="left: 1020px;">15 Sep</a></li>
+                                      </ol>
+                                      <span class="filling-line" aria-hidden="true" style="transform: scaleX(0.12794);"></span>
+                                  </div>
+                                  <!-- .events -->
+                              </div>
+                              <!-- .events-wrapper -->
+                              <ul class="cd-timeline-navigation">
+                                  <li><a href="#0" class="prev inactive">Prev</a></li>
+                                  <li><a href="#0" class="next">Next</a></li>
+                              </ul>
+                              <!-- .cd-timeline-navigation -->
+                          </div>
+                          <!-- .timeline -->
+                          <div class="events-content">
+                              <ol>
+                                  <li class="selected" data-date="16/01/2015">
+                                      <blockquote class="blockquote border-0">
+                                          <div class="media">
+                                              <div class="media-left">
+                                                  <img class="media-object img-xl mr-1" src="../../../app-assets/images/portrait/small/avatar-s-5.png" alt="Generic placeholder image">
+                                              </div>
+                                              <div class="media-body">
+                                                  Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                              </div>
+                                          </div>
+                                          <footer class="blockquote-footer text-right">Steve Jobs
+                                              <cite title="Source Title">Entrepreneur</cite>
+                                          </footer>
+                                      </blockquote>
+                                      <p class="lead mt-2">
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                      </p>
+                                  </li>
+                                  <li data-date="28/02/2015">
+                                      <blockquote class="blockquote border-0">
+                                          <div class="media">
+                                              <div class="media-left">
+                                                  <img class="media-object img-xl mr-1" src="../../../app-assets/images/portrait/small/avatar-s-6.png" alt="Generic placeholder image">
+                                              </div>
+                                              <div class="media-body">
+                                                  Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                              </div>
+                                          </div>
+                                          <footer class="blockquote-footer text-right">Steve Jobs
+                                              <cite title="Source Title">Entrepreneur</cite>
+                                          </footer>
+                                      </blockquote>
+                                      <p class="lead mt-2">
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                      </p>
+                                  </li>
+                                  <li data-date="20/04/2015">
+                                      <blockquote class="blockquote border-0">
+                                          <div class="media">
+                                              <div class="media-left">
+                                                  <img class="media-object img-xl mr-1" src="../../../app-assets/images/portrait/small/avatar-s-7.png" alt="Generic placeholder image">
+                                              </div>
+                                              <div class="media-body">
+                                                  Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                              </div>
+                                          </div>
+                                          <footer class="blockquote-footer text-right">Steve Jobs
+                                              <cite title="Source Title">Entrepreneur</cite>
+                                          </footer>
+                                      </blockquote>
+                                      <p class="lead mt-2">
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                      </p>
+                                  </li>
+                                  <li data-date="20/05/2015">
+                                      <blockquote class="blockquote border-0">
+                                          <div class="media">
+                                              <div class="media-left">
+                                                  <img class="media-object img-xl mr-1" src="../../../app-assets/images/portrait/small/avatar-s-8.png" alt="Generic placeholder image">
+                                              </div>
+                                              <div class="media-body">
+                                                  Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                              </div>
+                                          </div>
+                                          <footer class="blockquote-footer text-right">Steve Jobs
+                                              <cite title="Source Title">Entrepreneur</cite>
+                                          </footer>
+                                      </blockquote>
+                                      <p class="lead mt-2">
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                      </p>
+                                  </li>
+                                  <li data-date="09/07/2015">
+                                      <blockquote class="blockquote border-0">
+                                          <div class="media">
+                                              <div class="media-left">
+                                                  <img class="media-object img-xl mr-1" src="../../../app-assets/images/portrait/small/avatar-s-9.png" alt="Generic placeholder image">
+                                              </div>
+                                              <div class="media-body">
+                                                  Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                              </div>
+                                          </div>
+                                          <footer class="blockquote-footer text-right">Steve Jobs
+                                              <cite title="Source Title">Entrepreneur</cite>
+                                          </footer>
+                                      </blockquote>
+                                      <p class="lead mt-2">
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                      </p>
+                                  </li>
+                                  <li data-date="30/08/2015">
+                                      <blockquote class="blockquote border-0">
+                                          <div class="media">
+                                              <div class="media-left">
+                                                  <img class="media-object img-xl mr-1" src="../../../app-assets/images/portrait/small/avatar-s-6.png" alt="Generic placeholder image">
+                                              </div>
+                                              <div class="media-body">
+                                                  Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                              </div>
+                                          </div>
+                                          <footer class="blockquote-footer text-right">Steve Jobs
+                                              <cite title="Source Title">Entrepreneur</cite>
+                                          </footer>
+                                      </blockquote>
+                                      <p class="lead mt-2">
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                      </p>
+                                  </li>
+                                  <li data-date="15/09/2015">
+                                      <blockquote class="blockquote border-0">
+                                          <div class="media">
+                                              <div class="media-left">
+                                                  <img class="media-object img-xl mr-1" src="../../../app-assets/images/portrait/small/avatar-s-7.png" alt="Generic placeholder image">
+                                              </div>
+                                              <div class="media-body">
+                                                  Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                              </div>
+                                          </div>
+                                          <footer class="blockquote-footer text-right">Steve Jobs
+                                              <cite title="Source Title">Entrepreneur</cite>
+                                          </footer>
+                                      </blockquote>
+                                      <p class="lead mt-2">
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                      </p>
+                                  </li>
+                              </ol>
+                          </div>
+                          <!-- .events-content -->
+                      </section>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-xl-4 col-lg-12">
+      <div class="card" style="height: 687.141px;">
+          <div class="card-header">
+              <h4 class="card-title">Basic Card</h4>
+          </div>
+          <div class="card-content">
+              <img class="img-fluid" src="../../../app-assets/images/carousel/06.jpg" alt="Card image cap">
+              <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+              </div>
+          </div>
+          <div class="card-footer border-top-blue-grey border-top-lighten-5 text-muted">
+              <span class="float-left">3 hours ago</span>
+              <span class="float-right">
+                  <a href="#" class="card-link">Read More <i class="fa fa-angle-right"></i></a>
+                </span>
+          </div>
+      </div>
+  </div>
+</div>
+<!--/ Basic Horizontal Timeline -->
+
+      </div>
+    </div>
+  </div>
